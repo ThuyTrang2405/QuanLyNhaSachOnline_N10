@@ -1,0 +1,20 @@
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>📚 Khám phá thế giới sách</h1>
+    <p>Hàng ngàn đầu sách hay đang chờ bạn khám phá</p>
+  </div>
+</section>
+
+<section class="books-section">
+  <div class="section-header">
+    <h2>Sách nổi bật</h2>
+    <p>Những cuốn sách được yêu thích nhất</p>
+  </div>
+
+  <div class="books-grid">
+    <app-book-card 
+      *ngFor="let book of books"
+      [book]="book">
+    </app-book-card>
+  </div>
+</section>

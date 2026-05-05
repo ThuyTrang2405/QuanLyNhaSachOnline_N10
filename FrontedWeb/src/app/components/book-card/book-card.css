@@ -1,0 +1,145 @@
+.book-card {
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.book-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+
+.book-image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-badge {
+  display: none;
+}
+
+.original-price {
+  display: none;
+}
+
+.book-info {
+  padding: 8px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-title {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.4em;
+}
+
+.book-title:hover {
+  color: #ee4d2d;
+}
+
+.price-section {
+  margin-bottom: 6px;
+}
+
+.current-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ee4d2d;
+}
+
+.book-stats {
+  margin-bottom: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.stars {
+  font-size: 0.7rem;
+  color: #ffa500;
+}
+
+.rating-text {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.sold-count {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.add-to-cart-btn {
+  background: #ee4d2d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: auto;
+}
+
+.add-to-cart-btn:hover {
+  background: #d73527;
+}
+
+@media (max-width: 1200px) {
+  .book-card {
+    height: 260px;
+  }
+  
+  .book-image {
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-card {
+    height: 240px;
+  }
+  
+  .book-image {
+    height: 120px;
+  }
+  
+  .book-title {
+    font-size: 0.75rem;
+  }
+  
+  .current-price {
+    font-size: 0.85rem;
+  }
+}

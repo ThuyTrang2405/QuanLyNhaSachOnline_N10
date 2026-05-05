@@ -1,0 +1,76 @@
+<div *ngIf="book" class="book-detail-container">
+  <div class="breadcrumb">
+    <a routerLink="/">Trang chủ</a> / <span>{{ book.title }}</span>
+  </div>
+
+  <div class="book-detail">
+    <div class="book-image-section">
+      <div class="main-image">
+        <img [src]="book.image" [alt]="book.title">
+      </div>
+    </div>
+
+    <div class="book-info-section">
+      <div class="book-header">
+        <h1 class="book-title">{{ book.title }}</h1>
+        <p class="book-author">Tác giả: <strong>{{ book.author }}</strong></p>
+      </div>
+
+      <div class="book-price-section">
+        <div class="price-info">
+          <span class="current-price">{{ book.price | number:'1.0-0' }}₫</span>
+        </div>
+      </div>
+
+      <div class="book-description">
+        <h3>Mô tả sản phẩm</h3>
+        <p>{{ book.description }}</p>
+        <p>Cuốn sách này sẽ mang đến cho bạn những trải nghiệm tuyệt vời và kiến thức bổ ích. Được viết bởi tác giả tài năng với phong cách hấp dẫn, dễ hiểu.</p>
+      </div>
+
+      <div class="book-actions">
+        <div class="quantity-selector">
+          <label>Số lượng:</label>
+          <div class="quantity-controls">
+            <button class="qty-btn" (click)="decreaseQty()">-</button>
+            <span class="quantity">{{ quantity }}</span>
+            <button class="qty-btn" (click)="increaseQty()">+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-primary buy-now-btn">
+            <span>⚡</span> Mua ngay
+          </button>
+          <button class="btn btn-success add-to-cart-btn" (click)="addToCart()">
+            <span>🛒</span> Thêm vào giỏ
+          </button>
+        </div>
+      </div>
+
+      <div class="book-features">
+        <div class="feature">
+          <span class="feature-icon">🚚</span>
+          <div class="feature-text">
+            <strong>Miễn phí vận chuyển</strong>
+            <p>Đơn hàng từ 200.000₫</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🔄</span>
+          <div class="feature-text">
+            <strong>Đổi trả dễ dàng</strong>
+            <p>Trong vòng 7 ngày</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">✅</span>
+          <div class="feature-text">
+            <strong>Chính hãng 100%</strong>
+            <p>Cam kết chất lượng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
