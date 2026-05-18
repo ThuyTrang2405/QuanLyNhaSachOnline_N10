@@ -2,5 +2,7 @@
 
 GET {{QuanLyNhaSachAPI_HostAddress}}/weatherforecast/
 Accept: application/json
+POST http://localhost:5206/api/Auth/hash-all-passwords
+
 
 ###

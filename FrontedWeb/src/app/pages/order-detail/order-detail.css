@@ -1,0 +1,167 @@
+.order-detail-container {
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 1rem;
+}
+
+h2 { color: #333; margin: 0; font-size: 1.6rem; }
+
+.btn-back {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn-back:hover { color: #764ba2; text-decoration: underline; }
+
+.info-card {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.info-row {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #333;
+}
+.info-row:last-child { margin-bottom: 0; }
+.info-row .label { font-weight: 600; color: #64748b; display: inline-block; width: 120px; }
+
+.section-title { color: #333; margin-bottom: 1rem; font-size: 1.2rem; }
+
+.table-responsive { overflow-x: auto; border-radius: 12px; border: 1px solid #e2e8f0; }
+.detail-table { width: 100%; border-collapse: collapse; }
+.detail-table th { background: #f8fafc; color: #4a5568; padding: 1rem; text-transform: uppercase; font-size: 0.85rem; border-bottom: 2px solid #e2e8f0; }
+.detail-table td { padding: 1rem; border-bottom: 1px solid #edf2f7; color: #333; }
+.detail-table tfoot td { background: #f8fafc; font-size: 1.1rem; border-top: 2px solid #e2e8f0; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.price-color { color: #764ba2; font-weight: 600; }
+.total-price { color: #e74c3c; font-weight: 700; font-size: 1.2rem; }
+
+/* Status Badges */
+.status-badge { display: inline-block; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
+.status-waiting { background-color: #fef3c7; color: #d97706; }
+.status-preparing { background-color: #ffedd5; color: #ea580c; }
+.status-shipping { background-color: #e0f2fe; color: #0284c7; }
+.status-success { background-color: #dcfce7; color: #16a34a; }
+.status-cancel { background-color: #f1f5f9; color: #64748b; }
+
+.loading-state, .error-state { text-align: center; padding: 3rem 2rem; }
+.spinner { border: 4px solid #f3f3f3; border-top: 4px solid #667eea; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 15px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Styling cho phần Edit Inline của Admin */
+.align-items-center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Tự động xuống hàng nếu màn hình nhỏ */
+}
+
+.admin-inline-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 15px;
+  border-left: 1px dashed #cbd5e0; /* Đường kẻ mờ ngăn cách chế độ xem và sửa */
+}
+
+.inline-input, .inline-select {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  outline: none;
+  font-size: 0.85rem;
+  color: #4a5568;
+  background-color: #fff;
+}
+
+.inline-input:focus, .inline-select:focus {
+  border-color: #667eea;
+}
+
+.btn-save-inline {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.btn-save-inline:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.btn-save-inline:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.admin-edit-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  margin-left: 15px; 
+  padding-left: 15px; 
+  border-left: 2px solid #e8e2f0; 
+  
+  background: transparent;
+  box-shadow: none;
+}
+
+/* --- KHUNG GROUP ĐỘC LẬP CHO CÁC MỤC CÓ EDIT --- */
+.info-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+/* Ép chữ "Trạng thái" và cục Badge nằm cân bằng ngang hàng tuyệt đối */
+.info-view-row {
+  display: flex;
+  align-items: center; 
+}
+
+/* Cố định lề bằng đúng với các thẻ info-row bình thường */
+.info-view-row .label {
+  flex: 0 0 140px; 
+  font-weight: 600;
+  color: #64748b;
+}
+
+.info-edit-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  margin-top: 10px; 
+  
+  margin-left: 125px; 
+  padding-left: 15px; 
+  border-left: 2px solid #e2e8f0; 
+}

@@ -1,0 +1,140 @@
+<div class="register-container">
+  <div class="register-card">
+
+    <!-- Header -->
+    <div class="register-header">
+      <h1>📚 Đăng ký</h1>
+      <p>Tạo tài khoản để mua sắm dễ dàng hơn</p>
+    </div>
+
+    <!-- Form -->
+    <form class="register-form" (ngSubmit)="onSubmit()" #registerForm="ngForm">
+
+      <!-- Lỗi từ server -->
+      <div class="alert-error" *ngIf="serverError">
+        ⚠️ {{ serverError }}
+      </div>
+
+      <!-- Họ tên -->
+      <div class="form-group">
+        <label for="hoTen">Họ và tên <span class="required">*</span></label>
+        <input
+          id="hoTen"
+          type="text"
+          [(ngModel)]="hoTen"
+          name="hoTen"
+          placeholder="Nhập họ và tên của bạn"
+          class="form-input"
+          [class.input-error]="errors['hoTen']">
+        <span class="error-msg" *ngIf="errors['hoTen']">{{ errors['hoTen'] }}</span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input
+          id="email"
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Nhập địa chỉ email"
+          class="form-input"
+          [class.input-error]="errors['email']">
+        <span class="error-msg" *ngIf="errors['email']">{{ errors['email'] }}</span>
+      </div>
+
+      <!-- Tên đăng nhập -->
+      <div class="form-group">
+        <label for="tenDangNhap">Tên đăng nhập <span class="required">*</span></label>
+        <input
+          id="tenDangNhap"
+          type="text"
+          [(ngModel)]="tenDangNhap"
+          name="tenDangNhap"
+          placeholder="Nhập tên đăng nhập (ít nhất 4 ký tự)"
+          class="form-input"
+          [class.input-error]="errors['tenDangNhap']">
+        <span class="error-msg" *ngIf="errors['tenDangNhap']">{{ errors['tenDangNhap'] }}</span>
+      </div>
+
+      <!-- Số điện thoại -->
+      <div class="form-group">
+        <label for="sdt">Số điện thoại</label>
+        <input
+          id="sdt"
+          type="tel"
+          [(ngModel)]="sdt"
+          name="sdt"
+          placeholder="Nhập số điện thoại (không bắt buộc)"
+          class="form-input">
+      </div>
+
+      <!-- Giới tính -->
+      <div class="form-group">
+        <label>Giới tính</label>
+        <div class="gender-options">
+          <label class="radio-label">
+            <input type="radio" [(ngModel)]="gioiTinh" name="gioiTinh" value="Nam"> Nam
+          </label>
+          <label class="radio-label">
+            <input type="radio" [(ngModel)]="gioiTinh" name="gioiTinh" value="Nữ"> Nữ
+          </label>
+          <label class="radio-label">
+            <input type="radio" [(ngModel)]="gioiTinh" name="gioiTinh" value="Khác"> Khác
+          </label>
+        </div>
+      </div>
+
+      <!-- Mật khẩu -->
+      <div class="form-group">
+        <label for="matKhau">Mật khẩu <span class="required">*</span></label>
+        <div class="input-wrapper">
+          <input
+            id="matKhau"
+            [type]="showPassword ? 'text' : 'password'"
+            [(ngModel)]="matKhau"
+            name="matKhau"
+            placeholder="Nhập mật khẩu (ít nhất 6 ký tự)"
+            class="form-input"
+            [class.input-error]="errors['matKhau']">
+          <button type="button" class="toggle-password" (click)="toggleShowPassword()">
+            {{ showPassword ? '🙈' : '👁' }}
+          </button>
+        </div>
+        <span class="error-msg" *ngIf="errors['matKhau']">{{ errors['matKhau'] }}</span>
+      </div>
+
+      <!-- Xác nhận mật khẩu -->
+      <div class="form-group">
+        <label for="xacNhanMatKhau">Xác nhận mật khẩu <span class="required">*</span></label>
+        <div class="input-wrapper">
+          <input
+            id="xacNhanMatKhau"
+            [type]="showConfirmPassword ? 'text' : 'password'"
+            [(ngModel)]="xacNhanMatKhau"
+            name="xacNhanMatKhau"
+            placeholder="Nhập lại mật khẩu"
+            class="form-input"
+            [class.input-error]="errors['xacNhanMatKhau']">
+          <button type="button" class="toggle-password" (click)="toggleShowConfirmPassword()">
+            {{ showConfirmPassword ? '🙈' : '👁' }}
+          </button>
+        </div>
+        <span class="error-msg" *ngIf="errors['xacNhanMatKhau']">{{ errors['xacNhanMatKhau'] }}</span>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary register-btn" [disabled]="isLoading">
+        <span *ngIf="!isLoading">Tạo tài khoản</span>
+        <span *ngIf="isLoading">⏳ Đang xử lý...</span>
+      </button>
+
+    </form>
+
+    <!-- Footer -->
+    <div class="register-footer">
+      <p>Đã có tài khoản? <a routerLink="/login" class="login-link">Đăng nhập ngay</a></p>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,123 @@
+<div class="admin-container">
+  
+  <div class="admin-header">
+    <div>
+      <h1>📋 Quản Lý Đơn Hàng Hệ Thống</h1>
+      <p>Xem, tìm kiếm, kiểm tra chi tiết và duyệt trạng thái các đơn đặt hàng</p>
+    </div>
+    <a routerLink="/" class="btn-back">← Về trang chủ</a>
+  </div>
+
+  <div class="search-box-wrapper">
+    <div class="search-input-group" style="max-width: 650px;">
+      
+      <select [(ngModel)]="loaiTimKiem" (change)="thucHienTimKiem()" class="search-select">
+        <option value="all">Tìm tất cả</option>
+        <option value="maDh">Mã đơn hàng</option>
+        <option value="tenKh">Tên khách hàng</option>
+        <option value="maVd">Mã Vận Đơn</option>
+      </select>
+      
+      <div class="search-divider"></div>
+      
+      <input 
+        type="text" 
+        [(ngModel)]="tuKhoaTimKiem" 
+        (input)="thucHienTimKiem()" 
+        placeholder="Nhập từ khóa cần tìm..." 
+        class="search-control"
+      />
+    </div>
+  </div>
+
+  <div class="loading-state" *ngIf="isLoading">
+    <div class="spinner">⏳</div>
+    <p>Đang tải danh sách dữ liệu hóa đơn tổng...</p>
+  </div>
+
+  <div class="alert-error" *ngIf="errorMsg">
+    ⚠️ {{ errorMsg }}
+  </div>
+
+  <ng-container *ngIf="!isLoading && !errorMsg">
+    <div class="table-wrapper" *ngIf="danhSachHienThi.length > 0">
+      <table class="data-table">
+        <table class="data-table">
+        <thead>
+          <tr>
+            <th>Mã Đơn</th>
+            <th>Khách Hàng</th>
+            <th>Ngày Đặt</th>
+            <th class="text-center">Tổng Tiền</th>
+            <th class="text-center">Trạng Thái</th>
+            <th class="text-center">Mã Vận Đơn</th>
+            <th class="text-center">Cập Nhật</th>
+            <th class="text-center">Chi Tiết</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let don of danhSachHienThi">
+            <td><strong>#{{ don.maDh }}</strong></td>
+            <td>
+              <div class="cust-name">{{ don.tenKhachHang }}</div>
+              <small class="cust-id">Mã khách hàng: {{ don.maNd }}</small>
+              <small class="cust-address">{{ don.diaChiGh }}</small>
+            </td>
+            <td class="text-nowrap">{{ don.ngayDat | date:'dd/MM/yyyy HH:mm' }}</td>
+            <td class="revenue text-nowrap">{{ don.tongTien | number:'1.0-0' }}₫</td>
+            
+            <td class="text-center">
+              <span [ngClass]="getClassTrangThai(don.trangThaiDon)">
+                {{ getTenTrangThai(don.trangThaiDon) }}
+              </span>
+            </td>
+            
+            <td class="text-center">
+              <div *ngIf="don.trangThaiDon === 0" class="shipping-input-flex">
+                <input 
+                  type="text" 
+                  [(ngModel)]="maVanDonInputs[don.maDh]" 
+                  placeholder="Nhập mã..." 
+                  class="input-tracking"
+                />
+                <button (click)="thayDoiTrangThai(don.maDh, 2)" class="btn-approve-fast">Duyệt</button>
+              </div>
+              <span *ngIf="don.trangThaiDon > 0" class="text-tracking">
+                <small *ngIf="don.maVanDon"><strong style="color: #667eea; font-size: 0.95rem;">{{ don.maVanDon }}</strong></small>
+                <small *ngIf="!don.maVanDon" class="text-muted">Đã duyệt (Không mã)</small>
+              </span>
+            </td>
+
+            <td class="text-center">
+              <select 
+                *ngIf="don.trangThaiDon !== 3 && don.trangThaiDon !== 4"
+                [ngModel]="don.trangThaiDon" 
+                (ngModelChange)="thayDoiTrangThai(don.maDh, $event)" 
+                class="status-select"
+              >
+                <option [value]="0" disabled>Chờ xác nhận</option>
+                <option [value]="1">Chờ lấy hàng</option>
+                <option [value]="2">Đang giao hàng</option>
+                <option [value]="3">Hoàn thành đơn</option>
+                <option [value]="4">Hủy đơn hàng</option>
+              </select>
+              <span *ngIf="don.trangThaiDon === 3 || don.trangThaiDon === 4" class="text-muted"><small>Đã khóa</small></span>
+            </td>
+
+            <td class="text-center">
+              <button [routerLink]="['/don-hang', don.maDh]" class="btn-view-detail">Chi tiết</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </table>
+    </div>
+
+    <div class="empty-state" *ngIf="danhSachHienThi.length === 0">
+      <div class="empty-icon">📭</div>
+      <h3>Không tìm thấy đơn hàng tương thích</h3>
+      <p>Vui lòng đổi từ khóa tìm kiếm khác (Ví dụ: Mã đơn chính xác hoặc tên viết liền).</p>
+    </div>
+  </ng-container>
+
+</div>

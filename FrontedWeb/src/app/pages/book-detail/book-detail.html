@@ -1,76 +1,81 @@
-<div *ngIf="book" class="book-detail-container">
+<!-- Loading -->
+<div class="loading-state" *ngIf="isLoading">
+  <div class="spinner"></div>
+  <p>Đang tải thông tin sách...</p>
+</div>
+
+<!-- Chi tiết sách -->
+<div class="book-detail-container" *ngIf="!isLoading && book">
+
   <div class="breadcrumb">
     <a routerLink="/">Trang chủ</a> / <span>{{ book.title }}</span>
   </div>
 
   <div class="book-detail">
+
+    <!-- Ảnh bìa -->
     <div class="book-image-section">
-      <div class="main-image">
-        <img [src]="book.image" [alt]="book.title">
-      </div>
+      <img
+        class="book-image"
+        [src]="book.image"
+        [alt]="book.title"
+        onerror="this.onerror=null;this.src='https://placehold.co/300x400?text=No+Image'"
+      >
     </div>
 
+    <!-- Thông tin -->
     <div class="book-info-section">
-      <div class="book-header">
-        <h1 class="book-title">{{ book.title }}</h1>
-        <p class="book-author">Tác giả: <strong>{{ book.author }}</strong></p>
-      </div>
 
-      <div class="book-price-section">
-        <div class="price-info">
-          <span class="current-price">{{ book.price | number:'1.0-0' }}₫</span>
-        </div>
-      </div>
+      <h1 class="book-title">{{ book.title }}</h1>
 
+      <p class="book-author">Tác giả: <strong>{{ book.author || 'Đang cập nhật' }}</strong></p>
+      <p class="book-category">Thể loại: <strong>{{ book.category || 'Đang cập nhật' }}</strong></p>
+
+      <div class="book-price">{{ book.price | number:'1.0-0' }}₫</div>
+
+      <p class="book-stock" [class.out-of-stock]="book.slTon === 0">
+        {{ book.slTon > 0 ? 'Còn ' + book.slTon + ' cuốn trong kho' : 'Hết hàng' }}
+      </p>
+
+      <div class="book-divider"></div>
+
+      <!-- Mô tả -->
       <div class="book-description">
         <h3>Mô tả sản phẩm</h3>
-        <p>{{ book.description }}</p>
-        <p>Cuốn sách này sẽ mang đến cho bạn những trải nghiệm tuyệt vời và kiến thức bổ ích. Được viết bởi tác giả tài năng với phong cách hấp dẫn, dễ hiểu.</p>
+        <p>{{ book.description || 'Chưa có mô tả.' }}</p>
       </div>
 
-      <div class="book-actions">
-        <div class="quantity-selector">
-          <label>Số lượng:</label>
-          <div class="quantity-controls">
-            <button class="qty-btn" (click)="decreaseQty()">-</button>
-            <span class="quantity">{{ quantity }}</span>
-            <button class="qty-btn" (click)="increaseQty()">+</button>
-          </div>
-        </div>
+      <div class="book-divider"></div>
 
-        <div class="action-buttons">
-          <button class="btn btn-primary buy-now-btn">
-            <span>⚡</span> Mua ngay
-          </button>
-          <button class="btn btn-success add-to-cart-btn" (click)="addToCart()">
-            <span>🛒</span> Thêm vào giỏ
-          </button>
+      <!-- Số lượng -->
+      <div class="quantity-wrapper">
+        <span>Số lượng:</span>
+        <div class="quantity-controls">
+          <button class="qty-btn" (click)="decreaseQty()">−</button>
+          <span class="quantity-number">{{ quantity }}</span>
+          <button class="qty-btn" (click)="increaseQty()" [disabled]="quantity >= book.slTon">+</button>
         </div>
       </div>
 
-      <div class="book-features">
-        <div class="feature">
-          <span class="feature-icon">🚚</span>
-          <div class="feature-text">
-            <strong>Miễn phí vận chuyển</strong>
-            <p>Đơn hàng từ 200.000₫</p>
-          </div>
-        </div>
-        <div class="feature">
-          <span class="feature-icon">🔄</span>
-          <div class="feature-text">
-            <strong>Đổi trả dễ dàng</strong>
-            <p>Trong vòng 7 ngày</p>
-          </div>
-        </div>
-        <div class="feature">
-          <span class="feature-icon">✅</span>
-          <div class="feature-text">
-            <strong>Chính hãng 100%</strong>
-            <p>Cam kết chất lượng</p>
-          </div>
-        </div>
+      <!-- Nút hành động -->
+      <div class="action-buttons">
+        <button class="buy-btn" (click)="buyNow()" [disabled]="book.slTon === 0">
+          ⚡ Mua ngay
+        </button>
+        <button class="cart-btn" (click)="addToCart()" [disabled]="book.slTon === 0">
+          🛒 Thêm vào giỏ
+        </button>
       </div>
+
+      <!-- Thông báo thêm giỏ -->
+      <p class="success-msg" *ngIf="addedMsg">{{ addedMsg }}</p>
+
     </div>
   </div>
+</div>
+
+<!-- Không tìm thấy -->
+<div class="empty-state" *ngIf="!isLoading && !book">
+  <p>Không tìm thấy thông tin sách.</p>
+  <a routerLink="/">← Về trang chủ</a>
 </div>

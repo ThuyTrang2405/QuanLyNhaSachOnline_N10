@@ -1,0 +1,90 @@
+<div class="checkout-container">
+
+  <!-- Header -->
+  <div class="checkout-header">
+    <h1>📦 Xác nhận đơn hàng</h1>
+    <a routerLink="/cart" class="back-link">← Quay lại giỏ hàng</a>
+  </div>
+
+  <div class="checkout-content">
+
+    <!-- Cột trái: Form địa chỉ -->
+    <div class="checkout-form-section">
+      <h2>Thông tin giao hàng</h2>
+
+      <!-- Thông tin người đặt -->
+      <div class="buyer-info">
+        <div class="info-row">
+          <span class="info-label">👤 Người đặt:</span>
+          <span class="info-value">{{ auth.currentUser?.hoTen }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📧 Email:</span>
+          <span class="info-value">{{ auth.currentUser?.email }}</span>
+        </div>
+      </div>
+
+      <!-- Form địa chỉ -->
+      <div class="form-group">
+        <label for="diaChi">Địa chỉ giao hàng <span class="required">*</span></label>
+        <textarea
+          id="diaChi"
+          [(ngModel)]="diaChiGiaoHang"
+          name="diaChi"
+          placeholder="Nhập địa chỉ giao hàng đầy đủ (số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố)"
+          class="form-textarea"
+          rows="3"
+          [class.input-error]="errorMsg && !diaChiGiaoHang.trim()">
+        </textarea>
+      </div>
+
+      <!-- Thông báo lỗi -->
+      <div class="alert-error" *ngIf="errorMsg">
+        ⚠️ {{ errorMsg }}
+      </div>
+
+      <!-- Nút xác nhận -->
+      <button
+        class="btn-confirm"
+        (click)="xacNhanDatHang()"
+        [disabled]="isLoading">
+        <span *ngIf="!isLoading">✅ Xác nhận đặt hàng</span>
+        <span *ngIf="isLoading">⏳ Đang xử lý...</span>
+      </button>
+    </div>
+
+    <!-- Cột phải: Tóm tắt đơn hàng -->
+    <div class="order-summary">
+      <h2>Tóm tắt đơn hàng</h2>
+
+      <div class="order-items">
+        <div class="order-item" *ngFor="let item of items">
+          <img [src]="item.hinhAnh" [alt]="item.tenSach" class="item-img">
+          <div class="item-detail">
+            <p class="item-name">{{ item.tenSach }}</p>
+            <p class="item-qty">Số lượng: {{ item.soLuong }}</p>
+          </div>
+          <div class="item-price">
+            {{ item.giaGoc * item.soLuong | number:'1.0-0' }}₫
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row">
+        <span>Tổng số lượng:</span>
+        <span>{{ cart.getTotalItems() }} cuốn</span>
+      </div>
+      <div class="summary-row total-row">
+        <span>Tổng tiền:</span>
+        <span class="total-price">{{ cart.getTotalPrice() | number:'1.0-0' }}₫</span>
+      </div>
+
+      <div class="shipping-note">
+        🚚 Miễn phí vận chuyển cho đơn từ 200.000₫
+      </div>
+    </div>
+
+  </div>
+</div>

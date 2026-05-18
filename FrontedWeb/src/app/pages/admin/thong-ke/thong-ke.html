@@ -1,0 +1,89 @@
+<div class="admin-container">
+
+  <!-- Header -->
+  <div class="admin-header">
+    <div>
+      <h1>📊 Thống kê doanh thu</h1>
+      <p>Doanh thu theo từng tháng của cửa hàng</p>
+    </div>
+    <a routerLink="/" class="btn-back">← Về trang chủ</a>
+  </div>
+
+  <!-- Loading -->
+  <div class="loading-state" *ngIf="isLoading">
+    <div class="spinner">⏳</div>
+    <p>Đang tải dữ liệu...</p>
+  </div>
+
+  <!-- Lỗi -->
+  <div class="alert-error" *ngIf="errorMsg">
+    ⚠️ {{ errorMsg }}
+  </div>
+
+  <!-- Nội dung -->
+  <ng-container *ngIf="!isLoading && !errorMsg">
+
+    <!-- Tổng quan -->
+    <div class="summary-cards">
+      <div class="summary-card">
+        <div class="card-icon">💰</div>
+        <div class="card-info">
+          <p class="card-label">Tổng doanh thu</p>
+          <p class="card-value">{{ tongDoanhThu | number:'1.0-0' }}₫</p>
+        </div>
+      </div>
+      <div class="summary-card">
+        <div class="card-icon">📦</div>
+        <div class="card-info">
+          <p class="card-label">Tổng đơn hoàn thành</p>
+          <p class="card-value">{{ tongDonHang }} đơn</p>
+        </div>
+      </div>
+      <div class="summary-card">
+        <div class="card-icon">📅</div>
+        <div class="card-info">
+          <p class="card-label">Số tháng có doanh thu</p>
+          <p class="card-value">{{ danhSach.length }} tháng</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bảng dữ liệu -->
+    <div class="table-wrapper" *ngIf="danhSach.length > 0">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Năm</th>
+            <th>Tháng</th>
+            <th>Số đơn hoàn thành</th>
+            <th>Doanh thu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of danhSach">
+            <td>{{ item.nam }}</td>
+            <td>{{ getTenThang(item.thang) }}</td>
+            <td class="text-center">{{ item.soDonHang }}</td>
+            <td class="text-right revenue">{{ item.doanhThu | number:'1.0-0' }}₫</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="total-row">
+            <td colspan="2"><strong>Tổng cộng</strong></td>
+            <td class="text-center"><strong>{{ tongDonHang }}</strong></td>
+            <td class="text-right revenue"><strong>{{ tongDoanhThu | number:'1.0-0' }}₫</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- Không có dữ liệu -->
+    <div class="empty-state" *ngIf="danhSach.length === 0">
+      <div class="empty-icon">📭</div>
+      <h3>Chưa có dữ liệu doanh thu</h3>
+      <p>Dữ liệu sẽ xuất hiện khi có đơn hàng hoàn thành.</p>
+    </div>
+
+  </ng-container>
+
+</div>

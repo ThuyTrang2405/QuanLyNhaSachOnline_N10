@@ -1,0 +1,162 @@
+/* Container tổng quản lý toàn bộ trang */
+.order-history-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 20px; /* Bo tròn góc mềm mại giống style chung */
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.05); /* Đổ bóng nhẹ theo tông màu chủ đạo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tiêu đề trang */
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+/* Dòng giới thiệu phụ phía dưới tiêu đề */
+.subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Định dạng Bảng danh sách đơn hàng chuyên nghiệp */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.order-table th {
+  background: #f8fafc;
+  color: #4a5568;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.order-table td {
+  padding: 1.25rem;
+  border-bottom: 1px solid #edf2f7;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Hiệu ứng hover nhẹ khi rê chuột vào các dòng của bảng */
+.order-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Cột tổng tiền nổi bật */
+.price-color {
+  color: #764ba2; /* Dùng tông màu tím trong dải gradient */
+  font-weight: 700;
+}
+
+/* Nút "Xem chi tiết" đồng bộ với nút .btn-cart (Nền trắng, viền gradient/màu chủ đạo) */
+.btn-detail {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px; /* Bo tròn elip giống nút của Huệ */
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #fff;
+  color: #667eea;
+  border: 2px solid #667eea;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-detail:hover {
+  opacity: 0.85;
+  transform: translateY(-2px); /* Hiệu ứng nhấc nhẹ lên khi hover */
+  background: #667eea;
+  color: #fff;
+}
+
+/* ========================================================== */
+/* CẤU HÌNH CÁC BADGE TRẠNG THÁI (STATUS BADGES) ĐƯỢC BO TRÒN */
+/* ========================================================== */
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-waiting { 
+  background-color: #fef3c7; 
+  color: #d97706; 
+} /* Chờ xác nhận: Vàng ấm */
+
+.status-preparing { 
+  background-color: #ffedd5; 
+  color: #ea580c; 
+} /* Chờ lấy hàng: Cam nhạt */
+
+.status-shipping { 
+  background-color: #e0f2fe; 
+  color: #0284c7; 
+} /* Đang giao hàng: Xanh dương nhẹ */
+
+.status-success { 
+  background-color: #dcfce7; 
+  color: #16a34a; 
+} /* Hoàn thành: Xanh lá nhẹ giống thực tế */
+
+.status-cancel { 
+  background-color: #f1f5f9; 
+  color: #64748b; 
+} /* Đã hủy: Xám nhã nhặn */
+
+/* ========================================================== */
+/* GIAO DIỆN TRẠNG THÁI TRỐNG / LỖI / LOADING (ĐỒNG BỘ NÓT FOUND) */
+/* ========================================================== */
+.loading-state, .error-state, .empty-state {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* Icon sách chuyển động nhún nhảy giống icon .book-icon của Huệ */
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+.empty-state p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+/* Nút "Mua sắm ngay" đồng bộ hoàn toàn với .btn-home (Nền Gradient tím-xanh) */
+.btn-shopping {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+}

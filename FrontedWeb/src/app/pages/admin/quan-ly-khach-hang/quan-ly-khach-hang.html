@@ -1,0 +1,85 @@
+<div class="admin-container">
+
+  <!-- Header -->
+  <div class="admin-header">
+    <div>
+      <h1>👥 Quản lý khách hàng</h1>
+      <p>Xem danh sách và khóa/mở tài khoản khách hàng</p>
+    </div>
+    <div class="header-actions">
+      <a routerLink="/admin/quan-ly-sach" class="btn-nav">📚 Quản lý sách</a>
+      <a routerLink="/admin/quan-ly-theloai" class="btn-nav">🏷️ Thể loại</a>
+      <a routerLink="/admin/thong-ke" class="btn-nav">📊 Thống kê</a>
+      <a routerLink="/" class="btn-back">← Về trang chủ</a>
+    </div>
+  </div>
+
+  <!-- Thông báo -->
+  <div class="alert-success" *ngIf="successMsg">✅ {{ successMsg }}</div>
+  <div class="alert-error"   *ngIf="errorMsg">⚠️ {{ errorMsg }}</div>
+
+  <!-- Thanh tìm kiếm + thống kê -->
+  <div class="toolbar">
+    <input
+      type="text"
+      [(ngModel)]="tuKhoa"
+      (ngModelChange)="loc()"
+      placeholder="🔍 Tìm theo tên, email, số điện thoại..."
+      class="search-input"
+    />
+    <span class="count-badge" *ngIf="!isLoading">
+      {{ danhSachLoc.length }} / {{ danhSach.length }} khách hàng
+    </span>
+  </div>
+
+  <!-- Loading -->
+  <div class="loading-state" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Đang tải danh sách...</p>
+  </div>
+
+  <!-- Bảng danh sách -->
+  <div class="table-wrapper" *ngIf="!isLoading">
+    <table class="kh-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Họ tên</th>
+          <th>Email</th>
+          <th>Số điện thoại</th>
+          <th>Trạng thái</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let kh of danhSachLoc; let i = index">
+          <td class="td-index">{{ i + 1 }}</td>
+          <td class="td-name">{{ kh.hoTen }}</td>
+          <td class="td-email">{{ kh.email }}</td>
+          <td class="td-sdt">{{ kh.sdt || '—' }}</td>
+          <td>
+            <span class="badge" [class.badge-active]="kh.trangThaiTk" [class.badge-locked]="!kh.trangThaiTk">
+              {{ kh.trangThaiTk ? '✅ Hoạt động' : '🔒 Bị khóa' }}
+            </span>
+          </td>
+          <td>
+            <button
+              class="btn-toggle"
+              [class.btn-lock]="kh.trangThaiTk"
+              [class.btn-unlock]="!kh.trangThaiTk"
+              (click)="toggleTrangThai(kh)"
+            >
+              {{ kh.trangThaiTk ? '🔒 Khóa' : '🔓 Mở khóa' }}
+            </button>
+          </td>
+        </tr>
+
+        <!-- Trống -->
+        <tr *ngIf="danhSachLoc.length === 0">
+          <td colspan="6" class="empty-row">Không tìm thấy khách hàng nào</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

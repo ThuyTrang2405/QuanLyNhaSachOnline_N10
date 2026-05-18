@@ -1,11 +1,12 @@
 <div class="book-card">
   <div class="book-image" [routerLink]="['/book', book.id]">
-    <img [src]="book.image" [alt]="book.title">
+    <img [src]="book.image" [alt]="book.title" loading="lazy"
+         onerror="this.onerror=null;this.src='https://placehold.co/200x280?text=No+Image'">
   </div>
 
   <div class="book-info">
     <h3 class="book-title" [routerLink]="['/book', book.id]">{{ book.title }}</h3>
-    
+
     <div class="price-section">
       <div class="current-price">{{ book.price | number:'1.0-0' }}₫</div>
     </div>
@@ -13,9 +14,9 @@
     <div class="book-stats">
       <div class="rating">
         <span class="stars">⭐⭐⭐⭐⭐</span>
-        <span class="rating-text">{{ getRating() }}</span>
+        <span class="rating-text">{{ rating }}</span>
       </div>
-      <div class="sold-count">Đã bán {{ getSoldCount() }}</div>
+      <div class="sold-count">Đã bán {{ soldCount }}</div>
     </div>
 
     <button class="add-to-cart-btn" (click)="addToCart()">

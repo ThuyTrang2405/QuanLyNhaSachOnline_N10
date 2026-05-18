@@ -1,0 +1,11 @@
+﻿# # For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+# ### 1. Lấy Token Đăng Nhập
+# POST https://localhost:7188/api/Auth/login
+# Content-Type: application/json
+
+# {
+#   "TaiKhoan": "user_001",
+#   "MatKhau": "P@ss791"
+# }
+

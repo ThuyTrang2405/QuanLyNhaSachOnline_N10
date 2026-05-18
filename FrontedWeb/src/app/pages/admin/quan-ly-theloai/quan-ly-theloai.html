@@ -1,0 +1,93 @@
+<div class="admin-container">
+
+  <!-- Header -->
+  <div class="admin-header">
+    <div>
+      <h1>🏷️ Quản lý thể loại</h1>
+      <p>Thêm, sửa và xóa thể loại sách</p>
+    </div>
+    <div class="header-actions">
+      <a routerLink="/admin/quan-ly-sach" class="btn-nav">📚 Quản lý sách</a>
+      <a routerLink="/admin/thong-ke" class="btn-nav">📊 Thống kê</a>
+      <a routerLink="/" class="btn-back">← Về trang chủ</a>
+    </div>
+  </div>
+
+  <!-- Thông báo -->
+  <div class="alert-success" *ngIf="successMsg">✅ {{ successMsg }}</div>
+  <div class="alert-error"   *ngIf="errorMsg">⚠️ {{ errorMsg }}</div>
+
+  <div class="content-grid">
+
+    <!-- Cột trái: Form thêm mới -->
+    <div class="add-panel">
+      <h2>➕ Thêm thể loại mới</h2>
+      <div class="form-group">
+        <input
+          type="text"
+          [(ngModel)]="tenMoi"
+          placeholder="Nhập tên thể loại..."
+          class="form-input"
+          (keyup.enter)="them()"
+        />
+      </div>
+      <button class="btn-add" (click)="them()" [disabled]="isAdding">
+        {{ isAdding ? '⏳ Đang thêm...' : '➕ Thêm' }}
+      </button>
+    </div>
+
+    <!-- Cột phải: Danh sách -->
+    <div class="list-panel">
+      <div class="list-header">
+        <h2>Danh sách thể loại</h2>
+        <span class="count-badge" *ngIf="!isLoading">{{ danhSach.length }} thể loại</span>
+      </div>
+
+      <!-- Loading -->
+      <div class="loading-state" *ngIf="isLoading">
+        <div class="spinner"></div>
+        <p>Đang tải...</p>
+      </div>
+
+      <!-- Danh sách -->
+      <ul class="theloai-list" *ngIf="!isLoading">
+        <li *ngFor="let tl of danhSach" class="theloai-item">
+
+          <!-- Chế độ xem -->
+          <ng-container *ngIf="editingId !== tl.maTl">
+            <span class="theloai-name">{{ tl.tenTl }}</span>
+            <div class="item-actions">
+              <button class="btn-edit" (click)="batDauSua(tl)" title="Sửa">✏️</button>
+              <button class="btn-delete" (click)="xoa(tl)" title="Xóa">🗑️</button>
+            </div>
+          </ng-container>
+
+          <!-- Chế độ sửa inline -->
+          <ng-container *ngIf="editingId === tl.maTl">
+            <input
+              type="text"
+              [(ngModel)]="editingTen"
+              class="form-input edit-input"
+              (keyup.enter)="luuSua()"
+              (keyup.escape)="huyySua()"
+              autofocus
+            />
+            <div class="item-actions">
+              <button class="btn-save-inline" (click)="luuSua()" [disabled]="isSaving" title="Lưu">
+                {{ isSaving ? '⏳' : '✅' }}
+              </button>
+              <button class="btn-cancel-inline" (click)="huyySua()" title="Hủy">✕</button>
+            </div>
+          </ng-container>
+
+        </li>
+
+        <!-- Trống -->
+        <li class="empty-item" *ngIf="danhSach.length === 0">
+          Chưa có thể loại nào
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

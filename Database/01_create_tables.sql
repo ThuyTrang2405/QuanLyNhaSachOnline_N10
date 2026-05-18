@@ -1,5 +1,11 @@
 ﻿
 --Các bảng độc lập ko có khóa ngoại
+CREATE DATABASE BookstoreDB;
+GO
+
+-- 2. Chỉ định SQL Server sử dụng Database vừa tạo
+USE BookstoreDB;
+GO
 
 CREATE TABLE TheLoai (
     MaTL INT IDENTITY(1,1) PRIMARY KEY,

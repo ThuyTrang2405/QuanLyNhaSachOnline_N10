@@ -5,55 +5,64 @@
       <p>Chào mừng bạn quay trở lại BookStore</p>
     </div>
 
-    <form class="login-form">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input 
-          id="email"
-          type="email" 
-          [(ngModel)]="email" 
-          name="email"
-          placeholder="Nhập email của bạn"
-          class="form-input">
+    <form class="login-form" (ngSubmit)="onSubmit()">
+
+      <!-- Thông báo lỗi từ server -->
+      <div class="alert-error" *ngIf="errorMsg">
+        ⚠️ {{ errorMsg }}
       </div>
 
       <div class="form-group">
-        <label for="password">Mật khẩu</label>
-        <input 
-          id="password"
-          type="password" 
-          [(ngModel)]="password" 
-          name="password"
+        <label for="taiKhoan">Email hoặc tên đăng nhập</label>
+        <input
+          id="taiKhoan"
+          type="text"
+          [(ngModel)]="taiKhoan"
+          name="taiKhoan"
+          placeholder="Nhập email hoặc tên đăng nhập"
+          class="form-input"
+          [disabled]="isLoading">
+      </div>
+
+      <div class="form-group">
+        <label for="matKhau">Mật khẩu</label>
+        <input
+          id="matKhau"
+          type="password"
+          [(ngModel)]="matKhau"
+          name="matKhau"
           placeholder="Nhập mật khẩu"
-          class="form-input">
+          class="form-input"
+          [disabled]="isLoading">
       </div>
 
       <div class="form-options">
         <label class="checkbox-label">
           <input type="checkbox"> Ghi nhớ đăng nhập
         </label>
-        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+        <a routerLink="/forgot-password" class="forgot-password">Quên mật khẩu?</a>
       </div>
 
-      <button type="submit" class="btn btn-primary login-btn">
-        Đăng nhập
+      <button type="submit" class="btn btn-primary login-btn" [disabled]="isLoading">
+        <span *ngIf="!isLoading">Đăng nhập</span>
+        <span *ngIf="isLoading">⏳ Đang đăng nhập...</span>
       </button>
 
-      <div class="divider">
+      <!-- <div class="divider">
         <span>hoặc</span>
-      </div>
+      </div> -->
 
-      <button type="button" class="btn social-btn google-btn">
+      <!-- <button type="button" class="btn social-btn google-btn" [disabled]="isLoading">
         <span>🔍</span> Đăng nhập với Google
       </button>
 
-      <button type="button" class="btn social-btn facebook-btn">
+      <button type="button" class="btn social-btn facebook-btn" [disabled]="isLoading">
         <span>📘</span> Đăng nhập với Facebook
-      </button>
+      </button> -->
     </form>
 
     <div class="login-footer">
-      <p>Chưa có tài khoản? <a href="#" class="register-link">Đăng ký ngay</a></p>
+      <p>Chưa có tài khoản? <a routerLink="/register" class="register-link">Đăng ký ngay</a></p>
     </div>
   </div>
 </div>

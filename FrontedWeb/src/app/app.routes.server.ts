@@ -1,8 +1,6 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
-  {
-    path: '**',
-    renderMode: RenderMode.Prerender
-  }
+  // Toàn bộ app render phía client — tránh SSR hydration conflicts
+  { path: '**', renderMode: RenderMode.Client },
 ];

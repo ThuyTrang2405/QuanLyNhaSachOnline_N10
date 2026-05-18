@@ -1,0 +1,137 @@
+.admin-container {
+  max-width: 2000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 { font-size: 1.8rem; color: #2d3748; margin: 0 0 0.5rem 0; }
+.admin-header p { color: #718096; margin: 0; font-size: 0.95rem; }
+
+.btn-back {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 600;
+}
+
+
+.search-box-wrapper { margin-bottom: 1.5rem; }
+.search-input-group {
+  display: flex;
+  align-items: center;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  max-width: 500px;
+}
+.search-control {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.table-wrapper { overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 12px; }
+.data-table { width: 100%; border-collapse: collapse; text-align: left; }
+.data-table th { background: #f8fafc; padding: 1rem; color: #4a5568; font-weight: 600; border-bottom: 2px solid #e2e8f0; font-size: 0.9rem; }
+.data-table td { padding: 1rem; border-bottom: 1px solid #edf2f7; font-size: 0.95rem; vertical-align: middle; }
+.data-table tbody tr:hover { background: #f8fafc; }
+
+.cust-name { font-weight: 600; color: #2d3748; }
+.cust-address { color: #718096; display: block; max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.revenue { font-weight: 700; color: #764ba2; }
+
+.shipping-input-flex { display: flex; gap: 0.5rem; align-items: center; }
+.input-tracking { padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid #cbd5e0; font-size: 0.85rem; outline: none; }
+.btn-approve-fast { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; border: none; padding: 0.45rem 0.9rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+
+.action-buttons-flex { display: flex; gap: 0.5rem; align-items: center; justify-content: center; }
+.btn-view-detail { background: #fff; border: 1px solid #667eea; color: #667eea; padding: 0.4rem 0.8rem; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 0.85rem; transition: 0.2s; }
+.btn-view-detail:hover { background: #667eea; color: #fff; }
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px; /* Tăng khoảng cách trong để mập mạp hơn */
+  border-radius: 20px; /* Bo tròn hoàn toàn */
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 2px solid transparent; 
+}
+
+.status-waiting { background-color: #fef3c7; color: #d97706; border-color: #fde68a; }
+.status-preparing { background-color: #ffedd5; color: #ea580c; border-color: #fed7aa; }
+.status-shipping { background-color: #e0f2fe; color: #0284c7; border-color: #bae6fd; }
+.status-success { background-color: #dcfce7; color: #16a34a; border-color: #bbf7d0; }
+.status-cancel { background-color: #f1f5f9; color: #64748b; border-color: #e2e8f0; }
+
+.text-center { text-align: center; }
+.text-muted { color: #a0aec0; }
+.loading-state, .empty-state { text-align: center; padding: 3rem; color: #718096; }
+.spinner { font-size: 2rem; animation: spin 2s infinite linear; display: inline-block; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.status-select { 
+  padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e0; color: #4a5568; 
+  font-size: 0.85rem; outline: none; background: #fff; cursor: pointer;
+  max-width: 135px; /* Giới hạn độ rộng dropdown */
+}
+
+.search-select {
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-weight: 600;
+  color: #4a5568;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-view-detail { 
+  background: #fff; border: 1px solid #667eea; color: #667eea; 
+  border-radius: 20px; font-weight: 600; cursor: pointer; 
+  font-size: 0.85rem; transition: 0.2s; white-space: nowrap;
+}
+.btn-view-detail:hover { background: #667eea; color: #fff; }
+
+.search-divider {
+  width: 1px;
+  height: 24px;
+  background: #cbd5e0;
+  margin: 0 10px;
+}
+
+.shipping-input-flex { 
+  display: flex; gap: 6px; align-items: center; justify-content: center; 
+}
+.input-tracking { 
+  padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e0; font-size: 0.85rem; outline: none; 
+  width: 100px; /* Khống chế chiều rộng ô nhập */
+}
+.btn-approve-fast { 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; border: none; 
+  padding: 6px 12px; 
+  border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; 
+  white-space: nowrap;
+}

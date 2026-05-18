@@ -1,0 +1,81 @@
+<div class="cart-container">
+
+  <!-- Header trang -->
+  <div class="cart-header">
+    <h1>🛒 Giỏ hàng của bạn</h1>
+    <a routerLink="/" class="continue-shopping">← Tiếp tục mua sắm</a>
+  </div>
+
+  <!-- Giỏ hàng có sản phẩm -->
+  <div class="cart-content" *ngIf="items.length > 0">
+
+    <!-- Danh sách sản phẩm -->
+    <div class="cart-items">
+      <div class="cart-items-header">
+        <span class="col-product">Sản phẩm</span>
+        <span class="col-price">Đơn giá</span>
+        <span class="col-qty">Số lượng</span>
+        <span class="col-total">Thành tiền</span>
+        <span class="col-action"></span>
+      </div>
+
+      <div class="cart-item" *ngFor="let item of items">
+        <!-- Ảnh + tên -->
+        <div class="col-product">
+          <img [src]="item.hinhAnh" [alt]="item.tenSach" class="item-image">
+          <div class="item-info">
+            <a [routerLink]="['/book', item.maSach]" class="item-title">{{ item.tenSach }}</a>
+            <span class="item-stock" [class.low-stock]="item.slTon <= 5">
+              Còn {{ item.slTon }} cuốn
+            </span>
+          </div>
+        </div>
+
+        <!-- Đơn giá -->
+        <div class="col-price">{{ item.giaGoc | number:'1.0-0' }}₫</div>
+
+        <!-- Số lượng -->
+        <div class="col-qty">
+          <div class="qty-controls">
+            <button class="qty-btn" (click)="decreaseQty(item.maSach, item.soLuong)">−</button>
+            <span class="qty-value">{{ item.soLuong }}</span>
+            <button class="qty-btn" (click)="increaseQty(item.maSach, item.soLuong, item.slTon)"
+              [disabled]="item.soLuong >= item.slTon">+</button>
+          </div>
+        </div>
+
+        <!-- Thành tiền -->
+        <div class="col-total">{{ item.giaGoc * item.soLuong | number:'1.0-0' }}₫</div>
+
+        <!-- Xóa -->
+        <div class="col-action">
+          <button class="remove-btn" (click)="removeItem(item.maSach)" title="Xóa">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tóm tắt đơn hàng -->
+    <div class="cart-summary">
+      <h3>Tóm tắt đơn hàng</h3>
+      <div class="summary-row">
+        <span>Số lượng sách:</span>
+        <span>{{ cart.getTotalItems() }} cuốn</span>
+      </div>
+      <div class="summary-row total-row">
+        <span>Tổng tiền:</span>
+        <span class="total-price">{{ cart.getTotalPrice() | number:'1.0-0' }}₫</span>
+      </div>
+      <button class="btn-checkout" (click)="checkout()">⚡ Đặt hàng</button>
+      <button class="btn-clear" (click)="clearCart()">🗑 Xóa toàn bộ giỏ hàng</button>
+    </div>
+  </div>
+
+  <!-- Giỏ hàng trống -->
+  <div class="cart-empty" *ngIf="items.length === 0">
+    <div class="empty-icon">🛒</div>
+    <h2>Giỏ hàng của bạn đang trống</h2>
+    <p>Hãy thêm sách vào giỏ để tiếp tục mua sắm</p>
+    <a routerLink="/" class="btn-go-home">Khám phá sách ngay</a>
+  </div>
+
+</div>

@@ -1,0 +1,104 @@
+<div class="order-detail-container">
+  
+  <div class="header-section">
+    <h2>Chi Tiết Đơn Hàng #{{ donHang?.maDh }}</h2>
+    <a [routerLink]="auth.vaiTro === 'QuanTri' ? '/admin/quan-ly-don-hang' : '/my-orders'" class="btn-back">
+      ← Quay lại danh sách
+    </a>
+  </div>
+
+  <div *ngIf="isLoading" class="loading-state">
+    <div class="spinner"></div>
+    <p>Đang tải thông tin đơn hàng...</p>
+  </div>
+
+  <div *ngIf="errorMsg" class="error-state">
+    ⚠️ {{"Hiện không tải được thông tin đơn hàng. Vui lòng thử lại sau."}}
+  </div>
+
+  <div *ngIf="!isLoading && !errorMsg && donHang" class="detail-content">
+    
+    <div class="info-card">
+      <div class="info-row">
+        <span class="label">Mã khách hàng:</span>
+        <span class="value font-weight-bold text-dark">{{ donHang.maNd }}</span> 
+      </div>
+      
+      <div class="info-row">
+        <span class="label">Ngày đặt:</span>
+        <span class="value">{{ donHang.ngayDat | date:'dd/MM/yyyy HH:mm' }}</span>
+      </div>
+
+      
+      <div class="info-group">
+        <div class="info-view-row">
+          <span class="label">Mã vận đơn:</span>
+          <span *ngIf="donHang.maVanDon" class="tracking-text">{{ donHang.maVanDon }}</span>
+          <span *ngIf="!donHang.maVanDon" class="tracking-empty">Chưa có mã</span>
+        </div>
+        
+        <div *ngIf="auth.vaiTro === 'QuanTri' && !donHang.maVanDon && donHang.trangThaiDon !== 3 && donHang.trangThaiDon !== 4" class="info-edit-row">
+          <span class="text-muted small-text">Cập nhật:</span>
+          <input type="text" [(ngModel)]="editMaVanDon" placeholder="Nhập mã mới..." class="inline-input">
+        </div>
+      </div>
+
+      <div class="info-group">
+        <div class="info-view-row">
+          <span class="label">Trạng thái:</span>
+          <span [ngClass]="getClassTrangThai(donHang.trangThaiDon)">
+            {{ getTenTrangThai(donHang.trangThaiDon) }}
+          </span>
+        </div>
+        
+        <div *ngIf="auth.vaiTro === 'QuanTri' && donHang.trangThaiDon !== 3 && donHang.trangThaiDon !== 4" class="info-edit-row">
+          <span class="text-muted small-text">Đổi thành:</span>
+          <select [(ngModel)]="editTrangThai" class="inline-select">
+            <option [value]="0" disabled>Chờ xác nhận</option>
+            <option [value]="1">Chờ lấy hàng</option>
+            <option [value]="2">Đang giao hàng</option>
+            <option [value]="3">Hoàn thành đơn</option>
+            <option [value]="4">Hủy đơn hàng</option>
+          </select>
+          <button class="btn-save-inline" (click)="capNhatTrangThai()" [disabled]="isUpdating">
+            {{ isUpdating ? '⏳ Đang lưu...' : '💾 Lưu thay đổi' }}
+          </button>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <span class="label">Giao đến:</span>
+        <span class="value">{{ donHang.diaChiGh }}</span>
+      </div>
+    </div>
+
+    <h3 class="section-title">Sản phẩm đã mua</h3>
+    <div class="table-responsive">
+      <table class="detail-table">
+        <thead>
+          <tr>
+            <th>Tên sách</th>
+            <th class="text-center">Số lượng</th>
+            <th class="text-right">Đơn giá</th>
+            <th class="text-right">Thành tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of donHang.chiTiet">
+            <td><strong>{{ item.tenSach }}</strong></td>
+            <td class="text-center">{{ item.slsach }}</td>
+            <td class="text-right">{{ item.donGia | number:'1.0-0' }}₫</td>
+            <td class="text-right price-color">{{ item.thanhTien | number:'1.0-0' }}₫</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="text-right"><strong>Tổng cộng:</strong></td>
+            <td class="text-right total-price">{{ donHang.tongTien | number:'1.0-0' }}₫</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </div>
+</div>

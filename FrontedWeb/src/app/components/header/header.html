@@ -1,19 +1,52 @@
 <header class="header">
   <div class="container">
     <div class="header-content">
+
       <div class="logo" routerLink="/">
-        <h1>📚 BookStore</h1>
-        <p>Thế giới sách online</p>
+        <h1 class="logo-title">
+          <span class="brand-name">Nhà Sách Sao Hôm</span>
+        </h1>
+        <p class="slogan">Thế giới sách trực tuyến</p>
       </div>
-      
       <nav class="nav">
         <a routerLink="/" class="nav-link">Trang chủ</a>
-        <a routerLink="/login" class="nav-link">Đăng nhập</a>
-        <div class="cart-icon">
+
+        <ng-container *ngIf="!auth.isLoggedIn">
+          <a routerLink="/login" class="nav-link">Đăng nhập</a>
+          <a routerLink="/register" class="nav-link nav-link-register">Đăng ký</a>
+        </ng-container>
+
+        <ng-container *ngIf="auth.isLoggedIn">
+          
+          <div class="nav-dropdown" *ngIf="auth.vaiTro === 'QuanTri'">
+            <button class="nav-dropbtn">⚙️ Quản lý hệ thống ▾</button>
+            <div class="nav-dropdown-content">
+              <a routerLink="/admin/thong-ke">📊 Thống kê</a>
+              <a routerLink="/admin/quan-ly-sach">📚 Quản lý sách</a>
+              <a routerLink="/admin/quan-ly-theloai">🏷️ Thể loại</a>
+              <a routerLink="/admin/quan-ly-khach-hang">👥 Khách hàng</a>
+              <a routerLink="/admin/quan-ly-don-hang">📦 Quản lý đơn</a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown">
+            <button class="nav-dropbtn profile-btn">👤 {{ auth.currentUser?.hoTen }} ▾</button>
+            <div class="nav-dropdown-content dropdown-right">
+              <a *ngIf="auth.vaiTro !== 'QuanTri'" routerLink="/my-orders">📦 Đơn hàng của tôi</a>
+              <a (click)="logout()" class="logout-link" style="color: #e53e3e; cursor: pointer;">🚪 Đăng xuất</a>
+            </div>
+          </div>
+
+        </ng-container>
+
+        <div class="cart-icon" routerLink="/cart">
           <span>🛒</span>
-          <span class="cart-count">0</span>
+          <span class="cart-count" *ngIf="(cart.items$ | async)?.length ?? 0 > 0">
+            {{ cart.getTotalItems() }}
+          </span>
         </div>
       </nav>
+
     </div>
   </div>
 </header>

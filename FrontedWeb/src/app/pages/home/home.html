@@ -1,20 +1,110 @@
 <section class="hero-section">
   <div class="hero-content">
-    <h1>📚 Khám phá thế giới sách</h1>
+    <h1>Khám phá thế giới sách</h1>
     <p>Hàng ngàn đầu sách hay đang chờ bạn khám phá</p>
+
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Tìm kiếm theo tên sách hoặc tác giả..."
+        [(ngModel)]="searchKeyword"
+        (ngModelChange)="onSearchChange()"
+        name="search"
+      />
+      <button
+        *ngIf="searchKeyword"
+        class="clear-search-btn"
+        (click)="clearFilters()"
+        title="Xóa tìm kiếm"
+      >✕</button>
+    </div>
   </div>
 </section>
 
 <section class="books-section">
-  <div class="section-header">
-    <h2>Sách nổi bật</h2>
-    <p>Những cuốn sách được yêu thích nhất</p>
+  <!-- Bộ lọc thể loại -->
+  <div class="category-filter" *ngIf="categories.length > 0">
+    <button
+      class="category-btn"
+      [class.active]="selectedCategory === ''"
+      (click)="selectCategory('')"
+    >
+      Tất cả
+    </button>
+    <button
+      *ngFor="let cat of categories"
+      class="category-btn"
+      [class.active]="selectedCategory === cat"
+      (click)="selectCategory(cat)"
+    >
+      {{ cat }}
+    </button>
   </div>
 
-  <div class="books-grid">
-    <app-book-card 
-      *ngFor="let book of books"
+  <div class="section-header">
+    <div class="header-info">
+      <h2 *ngIf="!searchKeyword && !selectedCategory">Sách mới nhất</h2>
+      <ng-container *ngIf="searchKeyword || selectedCategory">
+        <h2>Kết quả tìm kiếm</h2>
+        <p class="results-count">
+          Tìm thấy <strong>{{ filteredTotal }}</strong> cuốn sách
+          <ng-container *ngIf="searchKeyword"> cho "<strong>{{ searchKeyword }}</strong>"</ng-container>
+        </p>
+      </ng-container>
+    </div>
+
+    <button
+      *ngIf="searchKeyword || selectedCategory"
+      class="clear-filter-btn"
+      (click)="clearFilters()"
+    >
+      ✕ Xóa bộ lọc
+    </button>
+  </div>
+
+  <!-- Trạng thái đang tải -->
+  <div class="loading-books" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Đang tải danh sách sách...</p>
+  </div>
+
+  <!-- Lưới hiển thị sách -->
+  <div class="books-grid" *ngIf="!isLoading && visibleBooks.length > 0">
+    <app-book-card
+      *ngFor="let book of visibleBooks"
       [book]="book">
     </app-book-card>
+  </div>
+
+  <!-- Trạng thái không có kết quả -->
+  <div class="no-results" *ngIf="!isLoading && visibleBooks.length === 0">
+    <div class="no-results-content">
+      <span class="no-results-icon">📭</span>
+      <h3>Không tìm thấy sách nào phù hợp</h3>
+      <p>Thử tìm kiếm với từ khóa khác hoặc xóa bộ lọc.</p>
+      <button class="btn btn-primary" (click)="clearFilters()">Xem tất cả sách</button>
+    </div>
+  </div>
+
+  <!-- Tải thêm sách (Infinite Scroll) -->
+  <div class="load-more-area" *ngIf="!isLoading && visibleBooks.length > 0">
+    <div class="loading-more" *ngIf="isLoadingMore">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+      <div class="spinner-small"></div>
+      <span>Đang tải thêm...</span>
+    </div>
+
+    <button
+      *ngIf="hasMore && !isLoadingMore"
+      class="btn-load-more"
+      (click)="loadMore()"
+    >
+      Xem thêm sách ↓
+    </button>
+
+    <p class="all-loaded" *ngIf="!hasMore && visibleBooks.length > 0">
+      Bạn đã xem hết danh sách sách 🎉
+    </p>
   </div>
 </section>
