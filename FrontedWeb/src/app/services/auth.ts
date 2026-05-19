@@ -46,12 +46,12 @@ export class AuthService {
         
         if (isPlatformBrowser(this.platformId)) {
           const mappedUser: AuthResponse = {
-            token:       res.Token,
-            maNd:        res.MaNd,
-            hoTen:       res.HoTen,
-            tenDangNhap: res.TenDangNhap,
-            email:       res.Email,
-            vaiTro:      res.VaiTro
+            token:       res.token,
+            maNd:        res.maNd,
+            hoTen:       res.hoTen,
+            tenDangNhap: res.tenDangNhap,
+            email:       res.email,
+            vaiTro:      res.vaiTro
           };
 
           if (mappedUser.token) {

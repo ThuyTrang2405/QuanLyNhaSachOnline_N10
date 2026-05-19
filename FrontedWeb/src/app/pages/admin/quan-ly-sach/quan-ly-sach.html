@@ -81,21 +81,21 @@
       <tbody>
         <tr *ngFor="let sach of danhSach">
           <td>
-            <img [src]="sach.HinhAnh" [alt]="sach.TenSach" class="book-thumb"
+            <img [src]="sach.hinhAnh" [alt]="sach.tenSach" class="book-thumb"
               onerror="this.onerror=null; this.src='https://placehold.co/50x65/png?text=No+Image'">
           </td>
           <td>
-            <span class="book-title">{{ sach.TenSach }}</span>
+            <span class="book-title">{{ sach.tenSach }}</span>
           </td>
-          <td class="text-muted">{{ sach.TenTacGia || '—' }}</td>
+          <td class="text-muted">{{ sach.tenTacGia || '—' }}</td>
           <td>
-            <span class="badge-category" *ngIf="sach.TenTheLoai">{{ sach.TenTheLoai }}</span>
-            <span class="text-muted" *ngIf="!sach.TenTheLoai">—</span>
+            <span class="badge-category" *ngIf="sach.tenTheLoai">{{ sach.tenTheLoai }}</span>
+            <span class="text-muted" *ngIf="!sach.tenTheLoai">—</span>
           </td>
-          <td class="text-right price">{{ sach.GiaGoc | number:'1.0-0' }}₫</td>
+          <td class="text-right price">{{ sach.giaGoc | number:'1.0-0' }}₫</td>
           <td class="text-center">
-            <span [class.low-stock]="sach.SlTon <= 5" [class.out-stock]="sach.SlTon === 0">
-              {{ sach.SlTon }}
+            <span [class.low-stock]="sach.slTon <= 5" [class.out-stock]="sach.slTon === 0">
+              {{ sach.slTon }}
             </span>
           </td>
           <td class="text-center">

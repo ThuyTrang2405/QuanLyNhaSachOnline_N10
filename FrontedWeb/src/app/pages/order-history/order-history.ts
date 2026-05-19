@@ -50,10 +50,10 @@ export class OrderHistory implements OnInit {
         // 3. DATA MAPPING: Biến đổi từ PascalCase (C#) sang camelCase (Angular)
         // Kỹ thuật này đối xứng 100% với cách Huệ làm ở file Checkout
         this.danhSachDonHang = data.map((don: any) => ({
-          maDh: don.MaDh,
-          ngayDat: don.NgayDat,
-          tongTien: don.TongTien,
-          trangThaiDon: don.TrangThaiDon
+          maDh: don.maDh,
+          ngayDat: don.ngayDat,
+          tongTien: don.tongTien,
+          trangThaiDon: don.trangThaiDon
         }));
 
         this.isLoading = false;

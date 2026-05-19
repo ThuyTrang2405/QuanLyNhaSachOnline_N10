@@ -4,15 +4,15 @@ import { Observable } from 'rxjs';
 import { AuthService } from './auth';
 
 export interface SachAdmin {
-  MaSach: number;
-  TenSach: string;
-  GiaGoc: number;
-  HinhAnh: string;
-  MoTa: string;
-  SlTon: number; 
-  TenTacGia?: string; 
-  TenTheLoai?: string;
-  TrangThaiS?: boolean;
+  maSach: number;
+  tenSach: string;
+  giaGoc: number;
+  hinhAnh: string;
+  moTa: string;
+  slTon: number; 
+  tenTacGia?: string; 
+  tenTheLoai?: string;
+  trangThaiS?: boolean;
 }
 
 export interface SachForm {

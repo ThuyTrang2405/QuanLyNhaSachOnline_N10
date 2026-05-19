@@ -41,18 +41,18 @@ export class OrderDetail implements OnInit {
     this.donHangService.getChiTietDonHang(id).subscribe({
       next: (data) => {
         this.donHang = {
-          maDh: data.MaDh,
-          maNd: data.MaNd,
-          maVanDon: data.MaVanDon,
-          ngayDat: data.NgayDat,
-          trangThaiDon: data.TrangThaiDon,
-          diaChiGh: data.DiaChiGh,
-          tongTien: data.TongTien,
-          chiTiet: data.ChiTiet ? data.ChiTiet.map((ct: any) => ({
-            tenSach: ct.TenSach,
-            slsach: ct.Slsach,
-            donGia: ct.DonGia,
-            thanhTien: ct.ThanhTien
+          maDh: data.maDh,
+          maNd: data.maNd,
+          maVanDon: data.maVanDon,
+          ngayDat: data.ngayDat,
+          trangThaiDon: data.trangThaiDon,
+          diaChiGh: data.diaChiGh,
+          tongTien: data.tongTien,
+          chiTiet: data.chiTiet ? data.chiTiet.map((ct: any) => ({
+            tenSach: ct.tenSach,
+            slsach: ct.slsach,
+            donGia: ct.donGia,
+            thanhTien: ct.thanhTien
           })) : []
         };
         this.editTrangThai = this.donHang.trangThaiDon;
