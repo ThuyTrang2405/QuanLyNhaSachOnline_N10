@@ -28,21 +28,18 @@ export class AuthService {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
-  // =============================================
-  // ĐĂNG NHẬP (Bắt buộc dùng POST)
-  // =============================================
+
   login(taiKhoan: string, matKhau: string): Observable<any> {
     const body = {
       TaiKhoan: taiKhoan,
       MatKhau: matKhau
     };
 
-    console.log('🚀 Gửi POST request đăng nhập:', body);
+    console.log('Gửi POST request đăng nhập:', body);
 
-    // Phải là this.http.post chứ KHÔNG ĐƯỢC dùng this.http.get
     return this.http.post<any>(`${this.API_URL}/login`, body).pipe(
       tap((res: any) => {
-        console.log('✅ Đăng nhập thành công, nhận phản hồi:', res);
+        console.log('Đăng nhập thành công, nhận phản hồi:', res);
         
         if (isPlatformBrowser(this.platformId)) {
           const mappedUser: AuthResponse = {
@@ -61,15 +58,13 @@ export class AuthService {
         }
       }),
       catchError(err => {
-        console.error('❌ Lỗi phản hồi từ server:', err);
+        console.error('Lỗi phản hồi từ server:', err);
         return throwError(() => err);
       })
     );
   }
 
-  // =============================================
-  // ĐĂNG KÝ
-  // =============================================
+
   register(data: any): Observable<any> {
     const body = {
       HoTen:       data.hoTen,
@@ -82,9 +77,7 @@ export class AuthService {
     return this.http.post(`${this.API_URL}/register`, body);
   }
 
-  // =============================================
-  // ĐĂNG XUẤT
-  // =============================================
+
   logout(): void {
     if (isPlatformBrowser(this.platformId)) {
       localStorage.removeItem(this.TOKEN_KEY);
@@ -99,10 +92,20 @@ export class AuthService {
     if (!token) return false;
     
     try {
-      const payload = JSON.parse(atob(token.split('.')[1]));
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const paddedBase64 = base64.padEnd(base64.length + (4 - base64.length % 4) % 4, '=');
+      const jsonPayload = decodeURIComponent(
+        atob(paddedBase64).split('').map(c => 
+          '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+        ).join('')
+      );
+      
+      const payload = JSON.parse(jsonPayload);
       return payload.exp * 1000 > Date.now();
-    } catch {
-      return false;
+    } catch (err) {
+      console.error('Lỗi giải mã Token:', err);
+      return false; 
     }
   }
 

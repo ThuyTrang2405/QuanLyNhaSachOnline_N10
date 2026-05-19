@@ -111,7 +111,7 @@
   background: rgba(255,255,255,0.3);
 }
 
-/* --- MENU DROPDOWN ADMIN --- */
+/*Menu dropdown*/
 .nav-dropdown {
   position: relative;
   display: inline-block;
@@ -155,7 +155,15 @@
 }
 .nav-dropdown-content a:last-child {
   border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
+
+.nav-dropdown-content a:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 
 .nav-dropdown-content a:hover {
   background-color: #f8fafc;

@@ -4,7 +4,6 @@
   padding: 0 1rem;
 }
 
-/* ===== HEADER ===== */
 .admin-header {
   display: flex;
   justify-content: space-between;
@@ -36,7 +35,6 @@
 
 .btn-back:hover { opacity: 0.75; }
 
-/* ===== LOADING ===== */
 .loading-state {
   text-align: center;
   padding: 4rem;
@@ -54,7 +52,6 @@
   to   { transform: rotate(360deg); }
 }
 
-/* ===== ERROR ===== */
 .alert-error {
   background: #fff5f5;
   border: 1px solid #feb2b2;
@@ -64,7 +61,6 @@
   font-size: 0.95rem;
 }
 
-/* ===== SUMMARY CARDS ===== */
 .summary-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,7 +96,6 @@
   margin: 0;
 }
 
-/* ===== TABLE ===== */
 .table-wrapper {
   background: #fff;
   border-radius: 12px;
@@ -153,7 +148,6 @@
   border-bottom: none !important;
 }
 
-/* ===== EMPTY STATE ===== */
 .empty-state {
   text-align: center;
   padding: 4rem 1rem;
@@ -171,7 +165,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .summary-cards {
     grid-template-columns: 1fr;

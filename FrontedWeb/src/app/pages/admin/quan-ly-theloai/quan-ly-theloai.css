@@ -4,7 +4,6 @@
   padding: 0 1rem;
 }
 
-/* ===== HEADER ===== */
 .admin-header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +27,6 @@
 }
 .btn-back:hover, .btn-nav:hover { opacity: 0.75; }
 
-/* ===== ALERTS ===== */
 .alert-success {
   background: #f0fff4; border: 1px solid #9ae6b4; color: #276749;
   padding: 0.85rem 1rem; border-radius: 8px; margin-bottom: 1.2rem; font-size: 0.95rem;
@@ -38,7 +36,6 @@
   padding: 0.85rem 1rem; border-radius: 8px; margin-bottom: 1.2rem; font-size: 0.95rem;
 }
 
-/* ===== CONTENT GRID ===== */
 .content-grid {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -46,7 +43,6 @@
   align-items: start;
 }
 
-/* ===== ADD PANEL ===== */
 .add-panel {
   background: #fff;
   border: 1px solid #eee;
@@ -88,7 +84,6 @@
 .btn-add:hover:not(:disabled) { opacity: 0.88; }
 .btn-add:disabled { opacity: 0.6; cursor: not-allowed; }
 
-/* ===== LIST PANEL ===== */
 .list-panel {
   background: #fff;
   border: 1px solid #eee;
@@ -115,7 +110,6 @@
   font-weight: 600;
 }
 
-/* ===== LOADING ===== */
 .loading-state { text-align: center; padding: 2rem; color: #888; }
 .spinner {
   width: 30px; height: 30px;
@@ -125,7 +119,6 @@
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ===== LIST ===== */
 .theloai-list {
   list-style: none;
   padding: 0;
@@ -187,7 +180,6 @@
   padding: 1.5rem;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
   .content-grid { grid-template-columns: 1fr; }
 }

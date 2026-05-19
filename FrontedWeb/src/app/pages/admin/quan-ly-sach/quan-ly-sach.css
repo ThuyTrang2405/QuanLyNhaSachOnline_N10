@@ -4,7 +4,6 @@
   padding: 0 1rem;
 }
 
-/* ===== HEADER ===== */
 .admin-header {
   display: flex;
   justify-content: space-between;
@@ -42,7 +41,6 @@
 
 .btn-back:hover, .btn-nav:hover { opacity: 0.75; }
 
-/* ===== ALERTS ===== */
 .alert-success {
   background: #f0fff4;
   border: 1px solid #9ae6b4;
@@ -63,7 +61,6 @@
   font-size: 0.95rem;
 }
 
-/* ===== TOOLBAR ===== */
 .toolbar {
   display: flex;
   align-items: center;
@@ -90,7 +87,6 @@
   font-size: 0.9rem;
 }
 
-/* ===== FORM PANEL ===== */
 .form-panel {
   background: #fff;
   border: 1px solid #e0e0e0;
@@ -181,7 +177,6 @@
 
 .btn-cancel:hover { border-color: #aaa; }
 
-/* ===== LOADING ===== */
 .loading-state {
   text-align: center;
   padding: 4rem;
@@ -200,7 +195,6 @@
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ===== TABLE ===== */
 .table-wrapper {
   background: #fff;
   border-radius: 12px;
@@ -269,7 +263,6 @@
 .low-stock { color: #e67e22; font-weight: 600; }
 .out-stock { color: #e74c3c; font-weight: 700; }
 
-/* ===== ACTION BUTTONS ===== */
 .action-btns {
   display: flex;
   gap: 0.4rem;
@@ -289,7 +282,6 @@
 .btn-hide  { background: #fff5f5; }
 .btn-edit:hover, .btn-hide:hover { opacity: 0.75; }
 
-/* ===== EMPTY STATE ===== */
 .empty-state {
   text-align: center;
   padding: 4rem 1rem;
@@ -299,7 +291,6 @@
 .empty-icon { font-size: 4rem; margin-bottom: 1rem; }
 .empty-state h3 { font-size: 1.3rem; color: #555; margin-bottom: 0.5rem; }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .form-grid { grid-template-columns: 1fr; }
   .form-group-full { grid-column: 1; }

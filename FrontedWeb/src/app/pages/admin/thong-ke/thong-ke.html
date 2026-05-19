@@ -1,6 +1,5 @@
 <div class="admin-container">
 
-  <!-- Header -->
   <div class="admin-header">
     <div>
       <h1>📊 Thống kê doanh thu</h1>
@@ -9,21 +8,17 @@
     <a routerLink="/" class="btn-back">← Về trang chủ</a>
   </div>
 
-  <!-- Loading -->
   <div class="loading-state" *ngIf="isLoading">
     <div class="spinner">⏳</div>
     <p>Đang tải dữ liệu...</p>
   </div>
 
-  <!-- Lỗi -->
   <div class="alert-error" *ngIf="errorMsg">
     ⚠️ {{ errorMsg }}
   </div>
 
-  <!-- Nội dung -->
   <ng-container *ngIf="!isLoading && !errorMsg">
 
-    <!-- Tổng quan -->
     <div class="summary-cards">
       <div class="summary-card">
         <div class="card-icon">💰</div>
@@ -48,7 +43,6 @@
       </div>
     </div>
 
-    <!-- Bảng dữ liệu -->
     <div class="table-wrapper" *ngIf="danhSach.length > 0">
       <table class="data-table">
         <thead>
@@ -77,7 +71,6 @@
       </table>
     </div>
 
-    <!-- Không có dữ liệu -->
     <div class="empty-state" *ngIf="danhSach.length === 0">
       <div class="empty-icon">📭</div>
       <h3>Chưa có dữ liệu doanh thu</h3>

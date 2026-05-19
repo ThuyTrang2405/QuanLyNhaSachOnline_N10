@@ -90,7 +90,7 @@ export class OrderDetail implements OnInit {
       next: () => {
         alert('Cập nhật trạng thái đơn hàng thành công!');
         this.isUpdating = false;
-        this.taiChiTietDonHang(this.donHang.maDh); // Load lại riêng 1 đơn này
+        this.taiChiTietDonHang(this.donHang.maDh);
       },
       error: (err) => {
         alert('Cập nhật thất bại. Vui lòng thử lại!');

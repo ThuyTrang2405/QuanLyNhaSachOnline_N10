@@ -24,7 +24,6 @@
 </section>
 
 <section class="books-section">
-  <!-- Bộ lọc thể loại -->
   <div class="category-filter" *ngIf="categories.length > 0">
     <button
       class="category-btn"
@@ -64,13 +63,11 @@
     </button>
   </div>
 
-  <!-- Trạng thái đang tải -->
   <div class="loading-books" *ngIf="isLoading">
     <div class="spinner"></div>
     <p>Đang tải danh sách sách...</p>
   </div>
 
-  <!-- Lưới hiển thị sách -->
   <div class="books-grid" *ngIf="!isLoading && visibleBooks.length > 0">
     <app-book-card
       *ngFor="let book of visibleBooks"
@@ -78,7 +75,6 @@
     </app-book-card>
   </div>
 
-  <!-- Trạng thái không có kết quả -->
   <div class="no-results" *ngIf="!isLoading && visibleBooks.length === 0">
     <div class="no-results-content">
       <span class="no-results-icon">📭</span>
@@ -88,7 +84,6 @@
     </div>
   </div>
 
-  <!-- Tải thêm sách (Infinite Scroll) -->
   <div class="load-more-area" *ngIf="!isLoading && visibleBooks.length > 0">
     <div class="loading-more" *ngIf="isLoadingMore">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
       <div class="spinner-small"></div>

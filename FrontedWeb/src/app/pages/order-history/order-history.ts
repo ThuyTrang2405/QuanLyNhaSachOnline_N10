@@ -4,7 +4,6 @@ import { RouterModule, Router } from '@angular/router';
 import { AuthService } from '../../services/auth';
 import { DonHangService } from '../../services/don-hang.service';
 
-// 1. Thêm Interface để định nghĩa kiểu dữ liệu chuẩn (Giống cách Huệ dùng CartItem)
 export interface LichSuDonHangItem {
   maDh: number;
   ngayDat: string;
@@ -21,7 +20,6 @@ export interface LichSuDonHangItem {
 })
 export class OrderHistory implements OnInit {
   
-  // 2. Thay vì dùng any[], tụi mình dùng Interface vừa tạo cho code chặt chẽ
   danhSachDonHang: LichSuDonHangItem[] = [];
   isLoading: boolean = false;
   errorMsg: string = '';
@@ -47,8 +45,6 @@ export class OrderHistory implements OnInit {
 
     this.donHangService.getDonHangCuaToi().subscribe({
       next: (data) => {
-        // 3. DATA MAPPING: Biến đổi từ PascalCase (C#) sang camelCase (Angular)
-        // Kỹ thuật này đối xứng 100% với cách Huệ làm ở file Checkout
         this.danhSachDonHang = data.map((don: any) => ({
           maDh: don.MaDh,
           ngayDat: don.NgayDat,
@@ -67,7 +63,6 @@ export class OrderHistory implements OnInit {
     });
   }
 
-  // Các hàm tiện ích giữ nguyên
   getTenTrangThai(status: number): string {
     switch (status) {
       case 0: return 'Chờ xác nhận';

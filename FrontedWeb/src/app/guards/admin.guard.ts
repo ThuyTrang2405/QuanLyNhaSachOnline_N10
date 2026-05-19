@@ -10,7 +10,6 @@ export const adminGuard: CanActivateFn = () => {
     return true;
   }
 
-  // Không phải Admin → về trang chủ
   router.navigate(['/']);
   return false;
 };

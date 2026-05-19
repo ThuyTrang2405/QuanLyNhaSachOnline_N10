@@ -84,7 +84,6 @@ export class Register {
     }).subscribe({
       next: () => {
         this.isLoading = false;
-        // Đăng ký thành công → chuyển sang trang đăng nhập
         this.router.navigate(['/login']);
       },
       error: (err) => {

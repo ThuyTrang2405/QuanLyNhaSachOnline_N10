@@ -39,7 +39,6 @@ public partial class QuanLyNhaSachContext : DbContext
 
      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 {
-    // Để trống ở đây để nó tự động lấy ConnectionString từ Program.cs và appsettings.json
 }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

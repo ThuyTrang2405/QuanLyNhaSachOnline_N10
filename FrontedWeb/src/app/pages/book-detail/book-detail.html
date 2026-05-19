@@ -1,10 +1,8 @@
-<!-- Loading -->
 <div class="loading-state" *ngIf="isLoading">
   <div class="spinner"></div>
   <p>Đang tải thông tin sách...</p>
 </div>
 
-<!-- Chi tiết sách -->
 <div class="book-detail-container" *ngIf="!isLoading && book">
 
   <div class="breadcrumb">
@@ -13,7 +11,6 @@
 
   <div class="book-detail">
 
-    <!-- Ảnh bìa -->
     <div class="book-image-section">
       <img
         class="book-image"
@@ -23,7 +20,6 @@
       >
     </div>
 
-    <!-- Thông tin -->
     <div class="book-info-section">
 
       <h1 class="book-title">{{ book.title }}</h1>
@@ -39,7 +35,6 @@
 
       <div class="book-divider"></div>
 
-      <!-- Mô tả -->
       <div class="book-description">
         <h3>Mô tả sản phẩm</h3>
         <p>{{ book.description || 'Chưa có mô tả.' }}</p>
@@ -47,7 +42,6 @@
 
       <div class="book-divider"></div>
 
-      <!-- Số lượng -->
       <div class="quantity-wrapper">
         <span>Số lượng:</span>
         <div class="quantity-controls">
@@ -57,7 +51,6 @@
         </div>
       </div>
 
-      <!-- Nút hành động -->
       <div class="action-buttons">
         <button class="buy-btn" (click)="buyNow()" [disabled]="book.slTon === 0">
           ⚡ Mua ngay
@@ -67,14 +60,12 @@
         </button>
       </div>
 
-      <!-- Thông báo thêm giỏ -->
       <p class="success-msg" *ngIf="addedMsg">{{ addedMsg }}</p>
 
     </div>
   </div>
 </div>
 
-<!-- Không tìm thấy -->
 <div class="empty-state" *ngIf="!isLoading && !book">
   <p>Không tìm thấy thông tin sách.</p>
   <a routerLink="/">← Về trang chủ</a>

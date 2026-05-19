@@ -1,15 +1,12 @@
 <div class="cart-container">
 
-  <!-- Header trang -->
   <div class="cart-header">
     <h1>🛒 Giỏ hàng của bạn</h1>
     <a routerLink="/" class="continue-shopping">← Tiếp tục mua sắm</a>
   </div>
 
-  <!-- Giỏ hàng có sản phẩm -->
   <div class="cart-content" *ngIf="items.length > 0">
 
-    <!-- Danh sách sản phẩm -->
     <div class="cart-items">
       <div class="cart-items-header">
         <span class="col-product">Sản phẩm</span>
@@ -20,7 +17,6 @@
       </div>
 
       <div class="cart-item" *ngFor="let item of items">
-        <!-- Ảnh + tên -->
         <div class="col-product">
           <img [src]="item.hinhAnh" [alt]="item.tenSach" class="item-image">
           <div class="item-info">
@@ -31,10 +27,8 @@
           </div>
         </div>
 
-        <!-- Đơn giá -->
         <div class="col-price">{{ item.giaGoc | number:'1.0-0' }}₫</div>
 
-        <!-- Số lượng -->
         <div class="col-qty">
           <div class="qty-controls">
             <button class="qty-btn" (click)="decreaseQty(item.maSach, item.soLuong)">−</button>
@@ -44,17 +38,14 @@
           </div>
         </div>
 
-        <!-- Thành tiền -->
         <div class="col-total">{{ item.giaGoc * item.soLuong | number:'1.0-0' }}₫</div>
 
-        <!-- Xóa -->
         <div class="col-action">
           <button class="remove-btn" (click)="removeItem(item.maSach)" title="Xóa">✕</button>
         </div>
       </div>
     </div>
 
-    <!-- Tóm tắt đơn hàng -->
     <div class="cart-summary">
       <h3>Tóm tắt đơn hàng</h3>
       <div class="summary-row">
@@ -70,7 +61,6 @@
     </div>
   </div>
 
-  <!-- Giỏ hàng trống -->
   <div class="cart-empty" *ngIf="items.length === 0">
     <div class="empty-icon">🛒</div>
     <h2>Giỏ hàng của bạn đang trống</h2>

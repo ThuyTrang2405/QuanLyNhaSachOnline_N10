@@ -1,6 +1,5 @@
 <div class="checkout-container">
 
-  <!-- Header -->
   <div class="checkout-header">
     <h1>📦 Xác nhận đơn hàng</h1>
     <a routerLink="/cart" class="back-link">← Quay lại giỏ hàng</a>
@@ -8,11 +7,9 @@
 
   <div class="checkout-content">
 
-    <!-- Cột trái: Form địa chỉ -->
     <div class="checkout-form-section">
       <h2>Thông tin giao hàng</h2>
 
-      <!-- Thông tin người đặt -->
       <div class="buyer-info">
         <div class="info-row">
           <span class="info-label">👤 Người đặt:</span>
@@ -24,7 +21,6 @@
         </div>
       </div>
 
-      <!-- Form địa chỉ -->
       <div class="form-group">
         <label for="diaChi">Địa chỉ giao hàng <span class="required">*</span></label>
         <textarea
@@ -38,12 +34,10 @@
         </textarea>
       </div>
 
-      <!-- Thông báo lỗi -->
       <div class="alert-error" *ngIf="errorMsg">
         ⚠️ {{ errorMsg }}
       </div>
 
-      <!-- Nút xác nhận -->
       <button
         class="btn-confirm"
         (click)="xacNhanDatHang()"
@@ -53,7 +47,6 @@
       </button>
     </div>
 
-    <!-- Cột phải: Tóm tắt đơn hàng -->
     <div class="order-summary">
       <h2>Tóm tắt đơn hàng</h2>
 

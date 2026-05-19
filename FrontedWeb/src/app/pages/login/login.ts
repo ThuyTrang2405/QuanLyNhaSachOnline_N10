@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, ChangeDetectorRef } from '@angular/core';import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { AuthService } from '../../services/auth';
@@ -12,18 +11,17 @@ import { AuthService } from '../../services/auth';
   styleUrl: './login.css',
 })
 export class Login {
-  taiKhoan: string = '';   // email hoặc tên đăng nhập
+  taiKhoan: string = '';  
   matKhau: string = '';
 
   isLoading: boolean = false;
   errorMsg: string = '';
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router, private cdr: ChangeDetectorRef) {}
 
   onSubmit(): void {
     this.errorMsg = '';
 
-    // Validate cơ bản phía client
     if (!this.taiKhoan.trim()) {
       this.errorMsg = 'Vui lòng nhập email hoặc tên đăng nhập';
       return;
@@ -38,12 +36,10 @@ export class Login {
     this.auth.login(this.taiKhoan.trim(), this.matKhau).subscribe({
       next: () => {
         this.isLoading = false;
-        // Đăng nhập thành công → về trang chủ
         this.router.navigate(['/']);
       },
       error: (err) => {
         this.isLoading = false;
-        // Lấy thông báo lỗi từ backend nếu có
         if (err.status === 401) {
           this.errorMsg = err.error?.message ?? 'Tài khoản hoặc mật khẩu không đúng';
         } else if (err.status === 0) {
@@ -51,6 +47,8 @@ export class Login {
         } else {
           this.errorMsg = 'Đã có lỗi xảy ra. Vui lòng thử lại.';
         }
+
+        this.cdr.markForCheck();
       }
     });
   }

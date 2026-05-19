@@ -77,11 +77,10 @@ h2 { color: #333; margin: 0; font-size: 1.6rem; }
 .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #667eea; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 15px; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-/* Styling cho phần Edit Inline của Admin */
 .align-items-center {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Tự động xuống hàng nếu màn hình nhỏ */
+  flex-wrap: wrap; 
 }
 
 .admin-inline-actions {
@@ -89,7 +88,7 @@ h2 { color: #333; margin: 0; font-size: 1.6rem; }
   align-items: center;
   gap: 8px;
   padding-left: 15px;
-  border-left: 1px dashed #cbd5e0; /* Đường kẻ mờ ngăn cách chế độ xem và sửa */
+  border-left: 1px dashed #cbd5e0; 
 }
 
 .inline-input, .inline-select {
@@ -154,7 +153,6 @@ h2 { color: #333; margin: 0; font-size: 1.6rem; }
   align-items: center; 
 }
 
-/* Cố định lề bằng đúng với các thẻ info-row bình thường */
 .info-view-row .label {
   flex: 0 0 140px; 
   font-weight: 600;
@@ -166,7 +164,7 @@ h2 { color: #333; margin: 0; font-size: 1.6rem; }
   align-items: center;
   gap: 10px;
   margin-top: 4px; 
-  margin-left: 140px; /* <--- Chỗ này là chìa khóa: Thụt đúng 140px bằng chiều rộng Label */
+  margin-left: 140px; 
   padding-left: 15px; 
   border-left: 2px solid #e2e8f0; 
 }

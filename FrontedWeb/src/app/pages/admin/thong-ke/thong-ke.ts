@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // 1. Import thêm ChangeDetectorRef
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ThongKeService, DoanhThuItem } from '../../../services/thong-ke';
@@ -16,7 +16,6 @@ export class ThongKe implements OnInit {
   isLoading: boolean = true;
   errorMsg: string = '';
 
-  // 2. Tiêm ChangeDetectorRef vào constructor
   constructor(
     private thongKeService: ThongKeService,
     private cdr: ChangeDetectorRef 
@@ -28,7 +27,6 @@ export class ThongKe implements OnInit {
         this.danhSach = data;
         this.isLoading = false;
         
-        // 3. Ép Angular cập nhật lại giao diện (DOM) ngay lập tức
         this.cdr.detectChanges(); 
       },
       error: (err) => {

@@ -1,10 +1,10 @@
 ﻿
 --Các bảng độc lập ko có khóa ngoại
-CREATE DATABASE BookstoreDB;
+CREATE DATABASE QuanLyNhaSach;
 GO
 
 -- 2. Chỉ định SQL Server sử dụng Database vừa tạo
-USE BookstoreDB;
+USE QuanLyNhaSach;
 GO
 
 CREATE TABLE TheLoai (
@@ -90,7 +90,7 @@ GO
 CREATE TABLE DonDatHang (
     MaDH INT IDENTITY(1,1) PRIMARY KEY,
     NgayDat DATETIME DEFAULT GETDATE(),
-    TrangThaiDon INT DEFAULT 0, -- 0: Chờ xử lý, 1: Đang giao, 2: Hoàn thành, 3: Đã hủy
+    TrangThaiDon INT DEFAULT 0, -- 0: Chờ xác nhận, 1: Chờ lấy hàng, 2: Đang giao, 3: Hoàn thành, 4: Đã hủy
     MaVanDon VARCHAR(50),
     DiaChiGH NVARCHAR(255) NOT NULL,
     MaND INT,

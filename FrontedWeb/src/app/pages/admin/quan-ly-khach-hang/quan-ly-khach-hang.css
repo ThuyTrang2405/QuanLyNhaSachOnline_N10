@@ -4,7 +4,6 @@
   padding: 0 1rem;
 }
 
-/* ===== HEADER ===== */
 .admin-header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +27,6 @@
 }
 .btn-back:hover, .btn-nav:hover { opacity: 0.75; }
 
-/* ===== ALERTS ===== */
 .alert-success {
   background: #f0fff4; border: 1px solid #9ae6b4; color: #276749;
   padding: 0.85rem 1rem; border-radius: 8px; margin-bottom: 1.2rem; font-size: 0.95rem;
@@ -38,7 +36,6 @@
   padding: 0.85rem 1rem; border-radius: 8px; margin-bottom: 1.2rem; font-size: 0.95rem;
 }
 
-/* ===== TOOLBAR ===== */
 .toolbar {
   display: flex;
   align-items: center;
@@ -70,7 +67,6 @@
   white-space: nowrap;
 }
 
-/* ===== LOADING ===== */
 .loading-state { text-align: center; padding: 3rem; color: #888; }
 .spinner {
   width: 36px; height: 36px;
@@ -80,7 +76,6 @@
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ===== TABLE ===== */
 .table-wrapper {
   background: #fff;
   border-radius: 12px;
@@ -123,7 +118,6 @@
 .td-email { color: #555; }
 .td-sdt   { color: #666; }
 
-/* ===== BADGE ===== */
 .badge {
   display: inline-block;
   padding: 0.25rem 0.7rem;
@@ -145,7 +139,6 @@
   border: 1px solid #feb2b2;
 }
 
-/* ===== NÚT TOGGLE ===== */
 .btn-toggle {
   border: none;
   border-radius: 7px;
@@ -171,7 +164,6 @@
 
 .btn-toggle:hover { opacity: 0.75; }
 
-/* ===== EMPTY ===== */
 .empty-row {
   text-align: center;
   color: #aaa;
@@ -179,7 +171,6 @@
   font-size: 0.95rem;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
   .admin-header { flex-direction: column; }
   .kh-table th, .kh-table td { padding: 0.65rem 0.75rem; }

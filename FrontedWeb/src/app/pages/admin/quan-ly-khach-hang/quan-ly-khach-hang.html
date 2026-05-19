@@ -1,6 +1,5 @@
 <div class="admin-container">
 
-  <!-- Header -->
   <div class="admin-header">
     <div>
       <h1>👥 Quản lý khách hàng</h1>
@@ -14,11 +13,9 @@
     </div>
   </div>
 
-  <!-- Thông báo -->
   <div class="alert-success" *ngIf="successMsg">✅ {{ successMsg }}</div>
   <div class="alert-error"   *ngIf="errorMsg">⚠️ {{ errorMsg }}</div>
 
-  <!-- Thanh tìm kiếm + thống kê -->
   <div class="toolbar">
     <input
       type="text"
@@ -32,13 +29,11 @@
     </span>
   </div>
 
-  <!-- Loading -->
   <div class="loading-state" *ngIf="isLoading">
     <div class="spinner"></div>
     <p>Đang tải danh sách...</p>
   </div>
 
-  <!-- Bảng danh sách -->
   <div class="table-wrapper" *ngIf="!isLoading">
     <table class="kh-table">
       <thead>
@@ -74,7 +69,6 @@
           </td>
         </tr>
 
-        <!-- Trống -->
         <tr *ngIf="danhSachLoc.length === 0">
           <td colspan="6" class="empty-row">Không tìm thấy khách hàng nào</td>
         </tr>

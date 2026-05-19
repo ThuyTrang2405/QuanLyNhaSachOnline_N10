@@ -25,7 +25,7 @@ export class ForgotPassword {
       return;
     }
     this.errorMsg = '';
-    // Placeholder — sẽ gắn logic gọi API khi backend sẵn sàng
+    // Placeholder —  gắn logic gọi API khi backend sẵn sàng
     this.submitted = true;
   }
 }

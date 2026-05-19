@@ -71,8 +71,8 @@
 
 .status-badge {
   display: inline-block;
-  padding: 6px 14px; /* Tăng khoảng cách trong để mập mạp hơn */
-  border-radius: 20px; /* Bo tròn hoàn toàn */
+  padding: 6px 14px; 
+  border-radius: 20px; 
   font-size: 0.85rem;
   font-weight: 600;
   white-space: nowrap;
@@ -127,7 +127,7 @@
 }
 .input-tracking { 
   padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e0; font-size: 0.85rem; outline: none; 
-  width: 100px; /* Khống chế chiều rộng ô nhập */
+  width: 100px; 
 }
 .btn-approve-fast { 
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; border: none; 
