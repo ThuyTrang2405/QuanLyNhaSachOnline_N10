@@ -160,3 +160,11 @@ h2 {
   font-size: 1rem;
   font-weight: 600;
 }
+
+.order-table th:nth-child(4),
+.order-table th:nth-child(4),
+.order-table td:nth-child(4),
+.order-table th:nth-child(5),
+.order-table td:nth-child(5) {
+  text-align: center;
+}

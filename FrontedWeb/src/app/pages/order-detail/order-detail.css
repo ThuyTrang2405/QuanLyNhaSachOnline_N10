@@ -35,13 +35,22 @@ h2 { color: #333; margin: 0; font-size: 1.6rem; }
   border: 1px solid #e2e8f0;
 }
 
-.info-row {
-  margin-bottom: 0.8rem;
+.info-row, .info-view-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
   font-size: 1rem;
   color: #333;
 }
-.info-row:last-child { margin-bottom: 0; }
-.info-row .label { font-weight: 600; color: #64748b; display: inline-block; width: 120px; }
+.info-row:last-child { 
+  margin-bottom: 0; 
+}
+
+.info-row .label, .info-view-row .label {
+  flex: 0 0 140px; 
+  font-weight: 600; 
+  color: #64748b; 
+}
 
 .section-title { color: #333; margin-bottom: 1rem; font-size: 1.2rem; }
 
@@ -134,14 +143,12 @@ h2 { color: #333; margin: 0; font-size: 1.6rem; }
   box-shadow: none;
 }
 
-/* --- KHUNG GROUP ĐỘC LẬP CHO CÁC MỤC CÓ EDIT --- */
 .info-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-/* Ép chữ "Trạng thái" và cục Badge nằm cân bằng ngang hàng tuyệt đối */
 .info-view-row {
   display: flex;
   align-items: center; 
@@ -158,10 +165,12 @@ h2 { color: #333; margin: 0; font-size: 1.6rem; }
   display: flex;
   align-items: center;
   gap: 10px;
-  
-  margin-top: 10px; 
-  
-  margin-left: 125px; 
+  margin-top: 4px; 
+  margin-left: 140px; /* <--- Chỗ này là chìa khóa: Thụt đúng 140px bằng chiều rộng Label */
   padding-left: 15px; 
   border-left: 2px solid #e2e8f0; 
+}
+
+.info-row .value {
+  flex: 1;
 }

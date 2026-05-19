@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using QuanLyNhaSachAPI.Models;
+using QuanLyNhaSachAPI.DTOs;
+using QuanLyNhaSachAPI.Services;
 
 namespace QuanLyNhaSachAPI.Controllers
 {
@@ -9,83 +9,79 @@ namespace QuanLyNhaSachAPI.Controllers
     [ApiController]
     public class TheLoaiController : ControllerBase
     {
-        private readonly QuanLyNhaSachContext _context;
-        public TheLoaiController(QuanLyNhaSachContext context) => _context = context;
+        private readonly ITheLoaiService _theLoaiService;
 
-        // GET /api/TheLoai — Lấy danh sách (public, dùng cho filter trang chủ)
+        public TheLoaiController(ITheLoaiService theLoaiService)
+        {
+            _theLoaiService = theLoaiService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetDanhSach()
         {
-            var list = await _context.TheLoais
-                .OrderBy(t => t.TenTl)
-                .Select(t => new { maTl = t.MaTl, tenTl = t.TenTl })
-                .ToListAsync();
+            var list = await _theLoaiService.LayDanhSachTheLoaiAsync();
             return Ok(list);
         }
 
-        // POST /api/TheLoai — Thêm thể loại (chỉ Admin)
         [HttpPost]
         [Authorize(Roles = "QuanTri")]
-        public async Task<IActionResult> ThemTheLoai([FromBody] TheLoaiRequest req)
+        public async Task<IActionResult> ThemTheLoai([FromBody] TheLoaiRequestDTO req)
         {
-            if (string.IsNullOrWhiteSpace(req.TenTl))
-                return BadRequest(new { message = "Tên thể loại không được để trống" });
-
-            bool trung = await _context.TheLoais.AnyAsync(t => t.TenTl == req.TenTl.Trim());
-            if (trung)
-                return Conflict(new { message = "Thể loại này đã tồn tại" });
-
-            var theLoai = new TheLoai { TenTl = req.TenTl.Trim() };
-            _context.TheLoais.Add(theLoai);
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Thêm thể loại thành công!", maTl = theLoai.MaTl, tenTl = theLoai.TenTl });
+            try
+            {
+                var theLoaiMoi = await _theLoaiService.ThemTheLoaiAsync(req);
+                return Ok(new { message = "Thêm thể loại thành công!", maTl = theLoaiMoi.MaTl, tenTl = theLoaiMoi.TenTl });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(new { message = ex.Message });
+            }
         }
 
-        // PUT /api/TheLoai/{id} — Sửa tên thể loại (chỉ Admin)
         [HttpPut("{id}")]
         [Authorize(Roles = "QuanTri")]
-        public async Task<IActionResult> SuaTheLoai(int id, [FromBody] TheLoaiRequest req)
+        public async Task<IActionResult> SuaTheLoai(int id, [FromBody] TheLoaiRequestDTO req)
         {
-            if (string.IsNullOrWhiteSpace(req.TenTl))
-                return BadRequest(new { message = "Tên thể loại không được để trống" });
-
-            var theLoai = await _context.TheLoais.FindAsync(id);
-            if (theLoai == null)
-                return NotFound(new { message = "Không tìm thấy thể loại" });
-
-            bool trung = await _context.TheLoais.AnyAsync(t => t.TenTl == req.TenTl.Trim() && t.MaTl != id);
-            if (trung)
-                return Conflict(new { message = "Tên thể loại này đã tồn tại" });
-
-            theLoai.TenTl = req.TenTl.Trim();
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Cập nhật thành công!" });
+            try
+            {
+                await _theLoaiService.CapNhatTheLoaiAsync(id, req);
+                return Ok(new { message = "Cập nhật thành công!" });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(new { message = ex.Message });
+            }
         }
 
-        // DELETE /api/TheLoai/{id} — Xóa thể loại (chỉ Admin)
         [HttpDelete("{id}")]
         [Authorize(Roles = "QuanTri")]
         public async Task<IActionResult> XoaTheLoai(int id)
         {
-            var theLoai = await _context.TheLoais.FindAsync(id);
-            if (theLoai == null)
-                return NotFound(new { message = "Không tìm thấy thể loại" });
-
-            bool dangDung = await _context.Saches.AnyAsync(s => s.MaTl == id);
-            if (dangDung)
-                return BadRequest(new { message = "Không thể xóa vì đang có sách thuộc thể loại này" });
-
-            _context.TheLoais.Remove(theLoai);
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Đã xóa thể loại" });
+            try
+            {
+                await _theLoaiService.XoaTheLoaiAsync(id);
+                return Ok(new { message = "Đã xóa thể loại" });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
-    }
-
-    public class TheLoaiRequest
-    {
-        public string TenTl { get; set; } = "";
     }
 }

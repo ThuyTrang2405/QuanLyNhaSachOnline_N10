@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Xml.Linq;
-using System.Linq;
+using QuanLyNhaSachAPI.Services;
 
 namespace QuanLyNhaSachAPI.Controllers
 {
@@ -8,18 +7,25 @@ namespace QuanLyNhaSachAPI.Controllers
     [ApiController]
     public class ConfigController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetStoreConfig()
-        {
-            XDocument doc = XDocument.Load("StoreConfig.xml");
-            var config = doc.Descendants("StoreInfo").Select(x => new
-            {
-                TenNhaSach = x.Element("Name")?.Value,
-                DiaChi = x.Element("Address")?.Value,
-                LienHe = x.Element("Hotline")?.Value
-            }).FirstOrDefault();
+        private readonly IConfigService _configService;
 
-            return Ok(config);
+        public ConfigController(IConfigService configService)
+        {
+            _configService = configService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetStoreConfig()
+        {
+            try
+            {
+                var config = await _configService.LayCauHinhNhaSachAsync();
+                return Ok(config);
+            }
+            catch (FileNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
         }
     }
 }

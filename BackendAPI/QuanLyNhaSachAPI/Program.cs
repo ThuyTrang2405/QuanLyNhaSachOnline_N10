@@ -1,24 +1,23 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using QuanLyNhaSachAPI.Models;
+using QuanLyNhaSachAPI.Repositories;
+using QuanLyNhaSachAPI.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. KẾT NỐI DATABASE
 builder.Services.AddDbContext<QuanLyNhaSachContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 2. CORS
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowAngular", policy => {
         policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
     });
 });
 
-// 3. AUTHENTICATION & JSON
 builder.Services.AddControllers().AddJsonOptions(options => {
     options.JsonSerializerOptions.PropertyNamingPolicy = null; // Giữ nguyên tên MaSach, TenSach như SQL
 });
@@ -65,6 +64,23 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddScoped<IDonHangRepository, DonHangRepository>();
+builder.Services.AddScoped<IDonHangService, DonHangService>();
+builder.Services.AddScoped<IThongKeRepository, ThongKeRepository>();
+builder.Services.AddScoped<IThongKeService, ThongKeService>();
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IKhachHangRepository, KhachHangRepository>();
+builder.Services.AddScoped<IKhachHangService, KhachHangService>();
+builder.Services.AddScoped<ISachRepository, SachRepository>();
+builder.Services.AddScoped<ISachService, SachService>();
+builder.Services.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
+builder.Services.AddScoped<ITheLoaiService, TheLoaiService>();
+builder.Services.AddScoped<IGioHangRepository, GioHangRepository>();
+builder.Services.AddScoped<IGioHangService, GioHangService>();
+builder.Services.AddScoped<IConfigRepository, ConfigRepository>();
+builder.Services.AddScoped<IConfigService, ConfigService>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment()) {
@@ -72,8 +88,6 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwaggerUI();
 }
 
-// Tắt HttpsRedirection để chạy Local mượt hơn không bị chặn cổng
-// app.UseHttpsRedirection(); 
 
 app.UseCors("AllowAngular");
 app.UseAuthentication();

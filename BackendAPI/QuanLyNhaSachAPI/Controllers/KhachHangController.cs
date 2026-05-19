@@ -1,65 +1,42 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using QuanLyNhaSachAPI.Models;
+using QuanLyNhaSachAPI.DTOs;
+using QuanLyNhaSachAPI.Services;
 
-namespace QuanLyNhaSachAPI.Controllers;
-
-[Route("api/[controller]")]
-[ApiController]
-[Authorize(Roles = "QuanTri")]
-public class KhachHangController : ControllerBase
+namespace QuanLyNhaSachAPI.Controllers
 {
-    private readonly QuanLyNhaSachContext _context;
-
-    public KhachHangController(QuanLyNhaSachContext context)
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize(Roles = "QuanTri")] 
+    public class KhachHangController : ControllerBase
     {
-        _context = context;
-    }
+        private readonly IKhachHangService _khachHangService;
 
-    // =============================================
-    // GET /api/KhachHang — Danh sách khách hàng
-    // =============================================
-    [HttpGet]
-    public async Task<IActionResult> GetDanhSach()
-    {
-        var danhSach = await _context.KhachHangs
-            .Include(kh => kh.MaNdNavigation)
-            .Select(kh => new
+        public KhachHangController(IKhachHangService khachHangService)
+        {
+            _khachHangService = khachHangService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetDanhSach()
+        {
+            var danhSach = await _khachHangService.LayDanhSachKhachHangAsync();
+            return Ok(danhSach);
+        }
+
+
+        [HttpPut("{id}/trang-thai")]
+        public async Task<IActionResult> CapNhatTrangThai(int id, [FromBody] CapNhatTrangThaiRequestDTO request)
+        {
+            try
             {
-                maNd        = kh.MaNd,
-                hoTen       = kh.MaNdNavigation.HoTen,
-                email       = kh.MaNdNavigation.Email,
-                sdt         = kh.MaNdNavigation.Sdt ?? "",
-                diaChi      = kh.MaNdNavigation.DiaChi ?? "",
-                trangThaiTk = kh.TrangThaiTk ?? true
-            })
-            .OrderBy(kh => kh.hoTen)
-            .ToListAsync();
-
-        return Ok(danhSach);
-    }
-
-    // =============================================
-    // PUT /api/KhachHang/{id}/trang-thai — Khóa/Mở tài khoản
-    // =============================================
-    [HttpPut("{id}/trang-thai")]
-    public async Task<IActionResult> CapNhatTrangThai(int id, [FromBody] CapNhatTrangThaiRequest request)
-    {
-        var khachHang = await _context.KhachHangs.FindAsync(id);
-
-        if (khachHang == null)
-            return NotFound(new { message = "Không tìm thấy khách hàng" });
-
-        khachHang.TrangThaiTk = request.TrangThai;
-        await _context.SaveChangesAsync();
-
-        string trangThaiText = request.TrangThai ? "mở khóa" : "khóa";
-        return Ok(new { message = $"Đã {trangThaiText} tài khoản thành công" });
-    }
-
-    public class CapNhatTrangThaiRequest
-    {
-        public bool TrangThai { get; set; }
+                string trangThaiText = await _khachHangService.CapNhatTrangThaiAsync(id, request.TrangThai);
+                return Ok(new { message = $"Đã {trangThaiText} tài khoản thành công" });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+        }
     }
 }
