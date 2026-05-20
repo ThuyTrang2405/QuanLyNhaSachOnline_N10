@@ -64,15 +64,15 @@ export class QuanLySach implements OnInit {
   }
 
 // Mở form sửa
-  openSua(sach: SachAdmin): void {
+ openSua(sach: any): void { 
     this.isEditing = true;
-    this.editingId = sach.MaSach; 
+    this.editingId = sach.maSach; 
     this.form = {
-      tenSach: sach.TenSach, 
-      giaGoc:  sach.GiaGoc,  
-      hinhAnh: sach.HinhAnh, 
-      moTa:    sach.MoTa,    
-      slton:   sach.SlTon,
+      tenSach: sach.tenSach, 
+      giaGoc:  sach.giaGoc,  
+      hinhAnh: sach.hinhAnh, 
+      moTa:    sach.moTa,    
+      slton:   sach.slTon,
     };
     this.showForm = true;
     this.errorMsg = '';
@@ -124,12 +124,12 @@ export class QuanLySach implements OnInit {
     });
   }
 
-anSach(sach: SachAdmin): void {
-    if (!confirm(`Bạn có chắc muốn ẩn sách "${sach.TenSach}"?`)) return;
+anSach(sach: any): void {
+    if (!confirm(`Bạn có chắc muốn ẩn sách "${sach.tenSach}"?`)) return;
 
-    this.sachService.anSach(sach.MaSach).subscribe({
+    this.sachService.anSach(sach.maSach).subscribe({
       next: () => {
-        this.successMsg = `Đã ẩn sách "${sach.TenSach}"`;
+        this.successMsg = `Đã ẩn sách "${sach.tenSach}"`;
         this.loadDanhSach();
         this.cdr.detectChanges(); // Ép cập nhật giao diện
         setTimeout(() => {

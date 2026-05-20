@@ -14,51 +14,46 @@ export interface Sach {
 }
 
 function mapSach(raw: any): Sach {
-
   return {
-
     id:
       raw?.id ??
-      raw?.MaSach ??
+      raw?.maSach ??
       0,
 
     title:
       raw?.title ??
-      raw?.TenSach ??
+      raw?.tenSach ??
       '',
 
     author:
       raw?.author ??
-      raw?.TenTacGia ??
+      raw?.tenTacGia ??
       '',
 
     price:
       raw?.price ??
-      raw?.GiaGoc ??
+      raw?.giaGoc ??
       0,
 
     image:
       raw?.image ??
-      raw?.HinhAnh ??
+      raw?.hinhAnh ??
       '',
 
     description:
       raw?.description ??
-      raw?.MoTa ??
+      raw?.moTa ??
       '',
 
     category:
       raw?.category ??
-      raw?.TenTheLoai ??
+      raw?.tenTheLoai ??
       '',
 
     slTon:
       raw?.slTon ??
-      raw?.SlTon ??
       0
-
   };
-
 }
 
 @Injectable({

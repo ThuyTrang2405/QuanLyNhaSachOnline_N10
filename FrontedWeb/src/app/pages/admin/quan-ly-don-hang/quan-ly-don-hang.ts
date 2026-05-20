@@ -36,15 +36,15 @@ export class QuanLyDonHang implements OnInit {
     this.donHangService.getAllDonHangAdmin().subscribe({
       next: (data) => {
         this.danhSachGoc = data.map((d: any) => ({
-          maDh: d.MaDh,
-          maNd:d.MaNd,
-          tenKhachHang: d.TenKhachHang,
-          ngayDat: d.NgayDat,
-          tongTien: d.TongTien,
-          trangThaiDon: d.TrangThaiDon,
-          diaChiGh: d.DiaChiGh,
-          maNguoiDuyet: d.MaNguoiDuyet,
-          maVanDon: d.MaVanDon
+          maDh: d.maDh,
+          maNd: d.maNd,
+          tenKhachHang: d.tenKhachHang,
+          ngayDat: d.ngayDat,
+          tongTien: d.tongTien,
+          trangThaiDon: d.trangThaiDon,
+          diaChiGh: d.diaChiGh,
+          maNguoiDuyet: d.maNguoiDuyet,
+          maVanDon: d.maVanDon
         }));
 
         this.danhSachGoc.forEach(d => {

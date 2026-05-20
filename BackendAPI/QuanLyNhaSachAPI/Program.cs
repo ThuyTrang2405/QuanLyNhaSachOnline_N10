@@ -18,9 +18,12 @@ builder.Services.AddCors(options => {
     });
 });
 
-builder.Services.AddControllers().AddJsonOptions(options => {
-    options.JsonSerializerOptions.PropertyNamingPolicy = null; // Giữ nguyên tên MaSach, TenSach như SQL
-});
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // ép JSON trả về camelCase để khớp với Angular
+        options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+    });
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options => {

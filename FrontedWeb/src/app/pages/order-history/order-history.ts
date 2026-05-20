@@ -46,10 +46,10 @@ export class OrderHistory implements OnInit {
     this.donHangService.getDonHangCuaToi().subscribe({
       next: (data) => {
         this.danhSachDonHang = data.map((don: any) => ({
-          maDh: don.MaDh,
-          ngayDat: don.NgayDat,
-          tongTien: don.TongTien,
-          trangThaiDon: don.TrangThaiDon
+          maDh: don.maDh,
+          ngayDat: don.ngayDat,
+          tongTien: don.tongTien,
+          trangThaiDon: don.trangThaiDon
         }));
 
         this.isLoading = false;

@@ -93,10 +93,12 @@ CREATE TABLE DonDatHang (
     TrangThaiDon INT DEFAULT 0, -- 0: Chờ xác nhận, 1: Chờ lấy hàng, 2: Đang giao, 3: Hoàn thành, 4: Đã hủy
     MaVanDon VARCHAR(50),
     DiaChiGH NVARCHAR(255) NOT NULL,
-    MaND INT,
-    FOREIGN KEY (MaND) REFERENCES KhachHang(MaND)
+    TongTien DECIMAL(18,2),    
+    MaND INT,                
+    MaNguoiDuyet INT,          
+    FOREIGN KEY (MaND) REFERENCES KhachHang(MaND),
+    FOREIGN KEY (MaNguoiDuyet) REFERENCES NguoiQuanTri(MaND)
 );
-GO
 
 -- Bảng Chi Tiết Đơn Đặt Hàng (Mối quan hệ "Bao gồm" giữa Đơn Hàng và Sách)
 CREATE TABLE ChiTietDonDatHang (
