@@ -1,7 +1,7 @@
 ### HƯỚNG DẪN CÀI ĐẶT VÀ CHẠY DỰ ÁN
 
 **1. Khởi tạo Cơ sở dữ liệu (Database):**
-Mở SQL Server Management Studio (SSMS) và thực thi (execute) các file `.sql` trong thư mục `Database` theo thứ tự sau:
+Thực thi (execute) các file `.sql` trong thư mục `Database` theo thứ tự sau:
 - `01_create_tables.sql` (Tạo cấu trúc bảng)
 - `02_business_logic.sql` (Tạo Trigger, Function, Stored Procedure, View)
 - `03_insert_data.sql` (Thêm dữ liệu mẫu vào database)
