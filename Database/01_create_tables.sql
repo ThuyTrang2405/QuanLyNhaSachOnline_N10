@@ -1,10 +1,10 @@
 ﻿
 --Các bảng độc lập ko có khóa ngoại
-CREATE DATABASE BookstoreDB;
+CREATE DATABASE QuanLyNhaSach;
 GO
 
 -- 2. Chỉ định SQL Server sử dụng Database vừa tạo
-USE BookstoreDB;
+USE QuanLyNhaSach;
 GO
 
 CREATE TABLE TheLoai (
