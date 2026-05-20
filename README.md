@@ -14,7 +14,7 @@ Trước khi chạy ứng dụng Backend, cần mở file `appsettings.json` tro
 **3. Thông tin tài khoản kiểm tra nhanh các chức năng:**
 
 * **Phân quyền Khách hàng:**
-    -Username: `user_001` 
+    - Username: `user_001` 
     - Email: `user_001@gmail.com` 
     - Mật khẩu: `123456`
     
