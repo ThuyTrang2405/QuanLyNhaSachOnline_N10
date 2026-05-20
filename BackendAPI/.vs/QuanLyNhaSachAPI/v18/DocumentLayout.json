@@ -249,8 +249,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-05-19T21:02:38.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:02:38.283Z"
             },
             {
               "$type": "Document",
@@ -262,8 +261,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\SachService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:18:39.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:18:39.079Z"
             },
             {
               "$type": "Document",
@@ -275,8 +273,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\TheLoaiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:26:36.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:26:36.833Z"
             },
             {
               "$type": "Document",
@@ -288,8 +285,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\ThongKeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:49:47.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:49:47.582Z"
             },
             {
               "$type": "Document",
@@ -301,8 +297,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-16T14:44:03.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T14:44:03.791Z"
             },
             {
               "$type": "Document",
@@ -314,8 +309,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\StoreConfig.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-05-16T14:47:47.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T14:47:47.81Z"
             },
             {
               "$type": "Document",
@@ -325,7 +319,7 @@
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\test.http",
               "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\test.http",
               "RelativeToolTip": "QuanLyNhaSachAPI\\test.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2026-05-16T23:24:27.269Z",
               "EditorCaption": ""
@@ -340,8 +334,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\KhachHangService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:05:53.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:05:53.433Z"
             },
             {
               "$type": "Document",
@@ -353,8 +346,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:18:28.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:18:28.154Z"
             },
             {
               "$type": "Document",
@@ -366,8 +358,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\GioHangService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:11:50.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:11:50.751Z"
             },
             {
               "$type": "Document",
@@ -379,8 +370,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\DonHangService.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAiwAkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:33:01.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:33:01.282Z"
             },
             {
               "$type": "Document",
@@ -392,8 +382,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\ConfigService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:53:57.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:53:57.787Z"
             },
             {
               "$type": "Document",
@@ -405,8 +394,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\AuthService.cs",
               "ViewState": "AgIAAIMAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:24:19.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:24:19.453Z"
             },
             {
               "$type": "Document",
@@ -418,8 +406,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\ThongKeRepositorycs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:49:44.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:49:44.938Z"
             },
             {
               "$type": "Document",
@@ -431,8 +418,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\TheLoaiRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:26:42.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:26:42.783Z"
             },
             {
               "$type": "Document",
@@ -444,8 +430,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\SachRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:21:30.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:21:30.861Z"
             },
             {
               "$type": "Document",
@@ -457,8 +442,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\KhachHangRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:06:04.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:06:04.045Z"
             },
             {
               "$type": "Document",
@@ -470,8 +454,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\GioHangRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:11:53.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:11:53.008Z"
             },
             {
               "$type": "Document",
@@ -483,8 +466,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\DonHangRepository.cs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:33:06.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:33:06.232Z"
             },
             {
               "$type": "Document",
@@ -496,8 +478,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\ConfigRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:54:37.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:54:37.718Z"
             },
             {
               "$type": "Document",
@@ -509,8 +490,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Repositories\\AuthRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:24:06.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:24:06.235Z"
             },
             {
               "$type": "Document",
@@ -522,8 +502,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\TheLoai.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T21:01:04.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:01:04.748Z"
             },
             {
               "$type": "Document",
@@ -535,8 +514,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\TacGium.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T21:01:03.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:01:03.181Z"
             },
             {
               "$type": "Document",
@@ -548,8 +526,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\Sach.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T21:01:00.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:01:00.709Z"
             },
             {
               "$type": "Document",
@@ -561,8 +538,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\NhaXuatBan.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T21:00:52.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:00:52.567Z"
             },
             {
               "$type": "Document",
@@ -574,8 +550,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\NguoiQuanTri.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T21:00:50.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:00:50.538Z"
             },
             {
               "$type": "Document",
@@ -587,8 +562,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\HoaDon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T21:00:42.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:00:42.753Z"
             },
             {
               "$type": "Document",
@@ -600,8 +574,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\GioHang.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T21:00:39.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T21:00:39.147Z"
             },
             {
               "$type": "Document",
@@ -613,8 +586,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\ChiTietDonDatHang.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T20:01:48.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T20:01:48.674Z"
             },
             {
               "$type": "Document",
@@ -626,8 +598,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\QuanLyNhaSachContext.cs",
               "ViewState": "AgIAAPUAAAAAAAAAAAAuwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T20:10:58.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T20:10:58.272Z"
             },
             {
               "$type": "Document",
@@ -639,8 +610,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\ThongKeDTOs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:22:54.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:22:54.762Z"
             },
             {
               "$type": "Document",
@@ -652,8 +622,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\StoreConfigDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:31:47.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:31:47.672Z"
             },
             {
               "$type": "Document",
@@ -665,8 +634,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\KhachHang.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T19:19:07.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T19:19:07.447Z"
             },
             {
               "$type": "Document",
@@ -678,8 +646,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\NguoiDung.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T19:19:06.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T19:19:06.391Z"
             },
             {
               "$type": "Document",
@@ -691,8 +658,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\SachDTOs.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:27:02.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:27:02.883Z"
             },
             {
               "$type": "Document",
@@ -704,8 +670,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\KhachHangDTOs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:25:30.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:25:30.413Z"
             },
             {
               "$type": "Document",
@@ -717,8 +682,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Models\\DonDatHang.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T19:28:37.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T19:28:37.19Z"
             },
             {
               "$type": "Document",
@@ -730,8 +694,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\GioHangDTOscs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:29:27.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:29:27.317Z"
             },
             {
               "$type": "Document",
@@ -743,8 +706,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\DonHangDTOs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:32:55.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:32:55.574Z"
             },
             {
               "$type": "Document",
@@ -756,8 +718,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\DangNhapDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T20:55:38.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T20:55:38.919Z"
             },
             {
               "$type": "Document",
@@ -769,8 +730,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\ThongKeController.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:49:37.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:49:37.366Z"
             },
             {
               "$type": "Document",
@@ -782,8 +742,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\TheLoaiController.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:31:15.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:31:15.073Z"
             },
             {
               "$type": "Document",
@@ -795,8 +754,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\SachController.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAAADsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:21:27.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:21:27.7Z"
             },
             {
               "$type": "Document",
@@ -808,8 +766,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\KhachHangController.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:05:23.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:05:23.896Z"
             },
             {
               "$type": "Document",
@@ -821,8 +778,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\GioHangController.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAAAF8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T16:16:42.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T16:16:42.669Z"
             },
             {
               "$type": "Document",
@@ -834,8 +790,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\DTOs\\AuthResponseDTO.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:23:59.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:23:59.212Z"
             },
             {
               "$type": "Document",
@@ -847,8 +802,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
               "ViewState": "AgIAAHAAAAAAAAAAAAAAAH4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:32:53.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:32:53.169Z"
             },
             {
               "$type": "Document",
@@ -860,8 +814,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\ConfigController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:53:54.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T12:53:54.192Z"
             },
             {
               "$type": "Document",
@@ -873,8 +826,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\AuthController.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:23:57.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T13:23:57.325Z"
             },
             {
               "$type": "Document",
@@ -886,8 +838,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\Properties\\launchSettings.json",
               "ViewState": "AgIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-19T20:33:25.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T20:33:25.019Z"
             },
             {
               "$type": "Document",
@@ -899,8 +850,7 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-18T17:07:55.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T17:07:55.654Z"
             },
             {
               "$type": "Document",
