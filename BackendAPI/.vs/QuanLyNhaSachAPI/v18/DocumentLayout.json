@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\services\\donhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\services\\donhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\test.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
@@ -41,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\services\\giohangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\services\\giohangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\services\\donhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\services\\donhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\services\\configservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -187,10 +191,6 @@
       "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|d:\\btl_lap trinh csdl\\quanlynhasachonline\\backendapi\\quanlynhasachapi\\controllers\\configcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8B1ACA3-FC71-4E78-A4F1-C4D2E5CF7861}|QuanLyNhaSachAPI\\QuanLyNhaSachAPI.csproj|solutionrelative:quanlynhasachapi\\controllers\\configcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -241,31 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuanLyNhaSachAPI.http",
-              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
-              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
-              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
-              "RelativeToolTip": "QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-05-19T21:02:38.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SachService.cs",
-              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\SachService.cs",
-              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\SachService.cs",
-              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\SachService.cs",
-              "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\SachService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:18:39.079Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TheLoaiService.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\TheLoaiService.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\TheLoaiService.cs",
@@ -277,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ThongKeService.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\ThongKeService.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\ThongKeService.cs",
@@ -289,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\appsettings.json",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\appsettings.json",
@@ -301,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "StoreConfig.xml",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\StoreConfig.xml",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\StoreConfig.xml",
@@ -313,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "test.http",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\test.http",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\test.http",
@@ -321,12 +297,60 @@
               "RelativeToolTip": "QuanLyNhaSachAPI\\test.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-05-16T23:24:27.269Z",
+              "WhenOpened": "2026-05-16T23:24:27.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
+              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowH4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T12:32:53.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DonHangService.cs",
+              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\DonHangService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\DonHangService.cs",
+              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\DonHangService.cs",
+              "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\DonHangService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T12:33:01.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
+              "Title": "SachService.cs",
+              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\SachService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\SachService.cs",
+              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\SachService.cs",
+              "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\SachService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T12:18:39.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QuanLyNhaSachAPI.http",
+              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
+              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
+              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
+              "RelativeToolTip": "QuanLyNhaSachAPI\\QuanLyNhaSachAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-19T21:02:38.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "KhachHangService.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\KhachHangService.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\KhachHangService.cs",
@@ -338,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Program.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Program.cs",
@@ -350,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "GioHangService.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\GioHangService.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\GioHangService.cs",
@@ -362,19 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DonHangService.cs",
-              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\DonHangService.cs",
-              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\DonHangService.cs",
-              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\DonHangService.cs",
-              "RelativeToolTip": "QuanLyNhaSachAPI\\Services\\DonHangService.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAiwAkAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:33:01.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ConfigService.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\ConfigService.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\ConfigService.cs",
@@ -386,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Services\\AuthService.cs",
@@ -398,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ThongKeRepositorycs.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\ThongKeRepositorycs.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\ThongKeRepositorycs.cs",
@@ -410,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "TheLoaiRepository.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\TheLoaiRepository.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\TheLoaiRepository.cs",
@@ -422,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "SachRepository.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\SachRepository.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\SachRepository.cs",
@@ -434,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "KhachHangRepository.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\KhachHangRepository.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\KhachHangRepository.cs",
@@ -446,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "GioHangRepository.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\GioHangRepository.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\GioHangRepository.cs",
@@ -458,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "DonHangRepository.cs.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\DonHangRepository.cs.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\DonHangRepository.cs.cs",
@@ -470,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ConfigRepository.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\ConfigRepository.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\ConfigRepository.cs",
@@ -482,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "AuthRepository.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Repositories\\AuthRepository.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Repositories\\AuthRepository.cs",
@@ -494,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "TheLoai.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\TheLoai.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\TheLoai.cs",
@@ -506,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "TacGium.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\TacGium.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\TacGium.cs",
@@ -518,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Sach.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\Sach.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\Sach.cs",
@@ -530,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "NhaXuatBan.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\NhaXuatBan.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\NhaXuatBan.cs",
@@ -542,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "NguoiQuanTri.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\NguoiQuanTri.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\NguoiQuanTri.cs",
@@ -554,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "HoaDon.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\HoaDon.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\HoaDon.cs",
@@ -566,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "GioHang.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\GioHang.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\GioHang.cs",
@@ -578,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ChiTietDonDatHang.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\ChiTietDonDatHang.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\ChiTietDonDatHang.cs",
@@ -590,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "QuanLyNhaSachContext.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\QuanLyNhaSachContext.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\QuanLyNhaSachContext.cs",
@@ -602,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "ThongKeDTOs.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\ThongKeDTOs.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\ThongKeDTOs.cs",
@@ -614,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "StoreConfigDTO.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\StoreConfigDTO.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\StoreConfigDTO.cs",
@@ -626,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "KhachHang.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\KhachHang.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\KhachHang.cs",
@@ -638,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "NguoiDung.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\NguoiDung.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\NguoiDung.cs",
@@ -650,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "SachDTOs.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\SachDTOs.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\SachDTOs.cs",
@@ -662,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "KhachHangDTOs.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\KhachHangDTOs.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\KhachHangDTOs.cs",
@@ -674,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "DonDatHang.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Models\\DonDatHang.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Models\\DonDatHang.cs",
@@ -686,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "GioHangDTOscs.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\GioHangDTOscs.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\GioHangDTOscs.cs",
@@ -698,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "DonHangDTOs.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\DonHangDTOs.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\DonHangDTOs.cs",
@@ -710,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "DangNhapDTO.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\DangNhapDTO.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\DangNhapDTO.cs",
@@ -722,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "ThongKeController.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\ThongKeController.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Controllers\\ThongKeController.cs",
@@ -734,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "TheLoaiController.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\TheLoaiController.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Controllers\\TheLoaiController.cs",
@@ -746,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "SachController.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\SachController.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Controllers\\SachController.cs",
@@ -758,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "KhachHangController.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\KhachHangController.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Controllers\\KhachHangController.cs",
@@ -770,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "GioHangController.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\GioHangController.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Controllers\\GioHangController.cs",
@@ -782,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "AuthResponseDTO.cs",
               "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\DTOs\\AuthResponseDTO.cs",
               "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\DTOs\\AuthResponseDTO.cs",
@@ -791,18 +803,6 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-19T13:23:59.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "DonHangController.cs",
-              "DocumentMoniker": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
-              "RelativeDocumentMoniker": "QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
-              "ToolTip": "D:\\BTL_LAP TRINH CSDL\\QuanLyNhaSachOnline\\BackendAPI\\QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
-              "RelativeToolTip": "QuanLyNhaSachAPI\\Controllers\\DonHangController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAAAH4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:32:53.169Z"
             },
             {
               "$type": "Document",
